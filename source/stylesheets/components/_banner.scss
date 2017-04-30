@@ -1,0 +1,12 @@
+.banner {
+  height: 100vh; /* 1vh => 1% of viewport height */
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.banner-content {
+  color:white;
+}
+

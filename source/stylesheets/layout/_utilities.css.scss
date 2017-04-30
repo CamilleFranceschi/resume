@@ -10,6 +10,16 @@
   padding-bottom: 5em;
 }
 
+
+.margined-bottom {
+  margin-bottom: 5%;
+}
+
+.margin-l-r-auto {
+  margin-right: auto;
+  margin-left:auto;
+}
+
 // Backgrounds
 .bg-text {
   background: #4a4a4a;
@@ -22,4 +32,10 @@
 }
 .bg-facebook {
   background: #3b5998;
+}
+
+.center-inside {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

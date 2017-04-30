@@ -1,0 +1,13 @@
+.btn-red {
+  background-color: $red;
+  border-radius: $border-radius-base;
+  transition: all 0.20s ease;
+  padding: 10px 20px;
+  color: white;
+}
+
+.btn-red:hover {
+ cursor: pointer;
+ transform: scale(1.2);
+ color: white;
+}
