@@ -1,178 +1,224 @@
-<div class="banner" style="background-image: linear-gradient(-199deg, rgba(146,157,144,0.6) 3%, rgba(0,35,23,0) 24%), url('images/surfer.jpg');">
-  <div class="banner-content text-center">
-    <h1>Camille Franceschi</h1>
-    <ul class="list-inline">
-      <li>
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-      </li>
-      <li>
-        <i class="fa fa-github" aria-hidden="true"></i>
-      </li>
-      <li>
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-      </li>
-    </ul>
-    <a href="" class="btn btn-red">Voir plus</a>
+<!-- <div class="banner" style="background-image: linear-gradient(-199deg, rgba(146,157,144,0.6) 3%, rgba(0,35,23,0) 24%), url('images/surfer.jpg');"> -->
+  <div id="sidebar">
+    <div class="text-center" id="sidebar-head">
+      <div class="center-inside">
+        <%= image_tag "avatar-camille.png", class: "avatar avatar-medium avatar-border-white margined-top" %>
+        <h4><b>Camille Franceschi</b>
+        <br><br>
+        <ul class="list-inline">
+          <li>
+            <i class="fa fa-envelope fa" aria-hidden="true"></i>
+          </li>
+          <li>
+            <i class="fa fa-github fa" aria-hidden="true"></i>
+          </li>
+          <li>
+            <i class="fa fa-linkedin fa" aria-hidden="true"></i>
+          </li>
+        </ul>
+        </h4>
+      </div>
+    </div>
+
+    <div class="wrapper height-all" id="sidebar-body">
+      <div class="tabs-column padded-light" >
+
+        <a class="tab-column padded-light-left active" data-target="#about">
+          <h5>About</h5>
+        </a>
+        <a class="tab-column padded-light-left" data-target="#experiences">
+          <h5>Experiences</h5>
+        </a>
+        <a class="tab-column padded-light-left" data-target="#education">
+          <h5>Education</h5>
+        </a>
+        <a class="tab-column padded-light-left" data-target="#skills">
+          <h5>Skills</h5>
+        </a>
+        <a class="tab-column padded-light-left" data-target="#side-projects">
+          <h5>Side projects</h5>
+        </a>
+        <a class="tab-column padded-light-left" data-target="#activities">
+          <h5>Activities</h5>
+        </a>
+      </div>
+    </div>
+
   </div>
-</div>
-    <div class="wrapper-white">
+  <div id="page-content">
+    <div class="wrapper center-inside-full-page">
       <div class="container">
-        <div class="tabs text-center">
-          <a class="tab active" data-target="#about">
-            <h3>350</h3>
-            <p>Followers</p>
-          </a>
-          <a class="tab" data-target="#experiences">
-            <h3>456</h3>
-            <p>Following</p>
-          </a>
-          <a class="tab" data-target="#education">
-            <h3>189</h3>
-            <p>Upvoted</p>
-          </a>
-          <a class="tab" data-target="#skills">
-            <h3>13</h3>
-            <p>Submitted</p>
-          </a>
-          <a class="tab" data-target="#side-projects">
-            <h3>13</h3>
-            <p>Submitted</p>
-          </a>
-          <a class="tab" data-target="#activities">
-            <h3>13</h3>
-            <p>Submitted</p>
-          </a>
+
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10">
+            <div class="card tab-content" id="about">
+              <h1>Hello, I am Camille Franceschi</h1>
+              <h2>A bit about me</h2>
+              <p> Learned mathematics first to do finance, lost in financial jobs lacking a little bit of technics for my taste, I decided to stop and to do Le Wagon bootcamp to learn to code.</p>
+              <p> Hard worker, enthusiastic to learn new things every day I am looking for a <span class="label label-success">job as Developer</span>.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-<div class="wrapper">
-  <div class="container">
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10">
+            <div class="tab-content hidden" id="experiences">
+              <h2>Experiences</h2>
 
-    <div class="row">
-      <div class="col-md-offset-1 col-md-10">
-        <div class="card card-white text-center tab-content" id="about">
-          <h2>About</h2>
-          <p>3 years of M&A background and a first entrepreneurial experience
-          Looking for a new challenge in a start-up/tech environment</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-offset-1 col-md-10">
-        <div class="card card-white text-center tab-content hidden" id="experiences">
-          <h2>Experiences</h2>
-          <p>JOBORA
-          Career marketplace for retail and services industries, Paris
-          August 2016 - Present
-          Structure the entire process
-          Build business metrics
-          Work on fundraising
-          Build the business plan & roadmap
-          Build the platform roadmap
-          More info here
-          CFL
-          M&A Boutique, Paris
-          September 2013 - July 2016
-          RTE - EnV at €16.7bn
-          Nice Airport - EnV at €2.3bn
-          Géothermie Bouillante - EnV at €52m
-          Vergnet Hydro - EnV at €9m
-          More info here</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-offset-1 col-md-10">
-        <div class="card card-white text-center tab-content hidden" id ="education">
-          <h2>Education</h2>
-          <p>Paris Dauphine University
-          September 2008 - January 2013
-          Master of Science in Quantitative Finance (104)
-          Licence of Mathematics and Computer Science
-          HEC Lausanne
-          February 2013 - July 2013
-          Master of Science in Corporate Finance</p>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-md-offset-1 col-md-10 ">
-        <div class="card card-white text-center tab-content hidden" id="skills">
-          <h2>Skills</h2>
-          <p>Business
-          Market & business analysis
-          Financial analysis
-          Financial modelisation
-          View more
-          Programming
-          R/Matlab/Java
-          VBA
-          HTML/CSS
-          Javascript/jQuery
-          Ruby/Ruby on Rails
-          View more
-          Design
-          Sketch</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-offset-1 col-md-10 ">
-        <div class="card card-white text-center tab-content hidden" id="side-projects">
-          <h2>Side Projects</h2>
-
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-xs-12 col-lg-4 ">
-                <div class="card card-grey center-inside margined-bottom margin-l-r-auto">
-                  <img src="images/logo_bookshare_blue.png" alt="">
-                  <a href="" class="card-link"></a>
+              <div class="product card-grey product-flex">
+                <div class="product-logo">
+                  <a href="https://www.lewagon.com/">
+                  <%= image_tag "lewagon.png", class: "logo-size-small" %>
+                  </a>
                 </div>
-                <!-- insert <div class="card"> -->
-              </div>
-              <div class="col-xs-12 col-lg-4 ">
-                <div class="card card-grey center-inside margined-bottom margin-l-r-auto">
-                  <img src="images/logo_easycat.png" alt="">
-                  <a href="" class="card-link"></a>
-                  </div>
-                <!-- insert <div class="card"> -->
-              </div>
-              <div class="col-xs-12 col-lg-4">
-                <div class="card card-grey center-inside margined-bottom margin-l-r-auto">
-                  <img src="images/Foodelice-logo-grey.png" alt="">
-                  <a href="" class="card-link"></a>
+                <div class="product-detail padded-light-left">
+                  <h4>Le Wagon, former tart-up</h4>
+                  <p><em>9 intensive weeks bootcamp to learn all the web stack. From the database to the browser.</em></p>
+                  <p>Teacher assistant on :<br>
+                  Ruby OOP<br>
+                  SQL & ActiveRecord<br>
+                  Front CSS, HTML, Bootstrap, Flexbox<br>
+                  Rails</p>
+                  <p><b>Key learning points: </b><span class="label label-success">Ability to share my knowledge</span> <span class="label label-success">Reinforcement of the basis learnt during bootcamp</span></p>
                 </div>
-                <!-- insert <div class="card"> -->
+                <div class="product-date">
+                <p>Paris & London, 04/17 - present</p>
+                </div>
+              </div>
+
+              <div class="product card-grey product-flex">
+                <div class="product-logo">
+                  <a href="http://www.jobora.fr/">
+                  <%= image_tag "logo-jobora.png", class: "logo-size-small" %>
+                  </a>
+                </div>
+                <div class="product-detail padded-light-left">
+                  <h4>JOBORA, start-up</h4>
+                  <p><em>Career marketplace for retail and services industries</em></p>
+                  <p>Structure the entire process<br>
+                  Build business metrics<br>
+                  Work on fundraising<br>
+                  Build the business plan & roadmap</p>
+                  <p><b>Key learning points: </b><span class="label label-success">start-up philosophy</span> <span class="label label-success">be flexible to do every task </span></p>
+                </div>
+                <div class="product-date">
+                <p>Paris, 08/16 - 01/17</p>
+                </div>
+              </div>
+
+              <div class="product product-grey product-flex">
+                <div class="card-logo">
+                  <a href="http://www.financieredulion.com/">
+                  <%= image_tag "logo-cfl.png", class: "logo-size-small" %>
+                  </a>
+                </div>
+                <div class="product-detail padded-light-left">
+                  <h4>CFL, M&A Boutique</h4>
+                  <p><em>M&A boutique specialized in transport, energy and environment</em></p>
+                  <p>Sectorial studies<br>
+                  Business and Financial modelisation (geothermal unit, CCGT)<br>
+                  Valuation<br>
+                  Participation to entire negociations(shareholders agreement & Investment agreement)</br>
+                  Worked on deals from 9m€ to €16.7bn EnV (RTE, Nice Airport,Géothermie Bouillante, Vergnet Hydro)</p>
+                  <p><b>Key learning points: </b><span class="label label-success">Modelisation</span> <span class="label label-success">hard-working</span> <span class="label label-success">learn by myself</span> <span class="label label-success">make it work whatever the problem is</span></p>
+                </div>
+                <div class="product-date">
+                  <p>Paris, 09/13 - 07/16</p>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-md-offset-1 col-md-10 ">
-        <div class="card card-white text-center tab-content hidden" id="activities">
-          <h2>Activities</h2>
-          <p>Master 104 Association
-          President of the association of the master Finance 104
-          2012 - 2013
-          Organisation of conferences with professionals
-          Organisation of a skiing trop (28 participants)
-          Cheer Up! Federation
-          National association to fight against cancer
-          2010 - 2012
-          Communication team member
-          Logistics team member for training weekends (250 participants)</p>
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10">
+            <div class="tab-content hidden" id ="education">
+              <h2>Education</h2>
+              <p>Paris Dauphine University
+              September 2008 - January 2013
+              Master of Science in Quantitative Finance (104)
+              Licence of Mathematics and Computer Science
+              HEC Lausanne
+              February 2013 - July 2013
+              Master of Science in Corporate Finance</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10 ">
+            <div class="tab-content hidden" id="skills">
+              <h2>Skills</h2>
+              <p>Business
+              Market & business analysis
+              Financial analysis
+              Financial modelisation
+              View more
+              Programming
+              R/Matlab/Java
+              VBA
+              HTML/CSS
+              Javascript/jQuery
+              Ruby/Ruby on Rails
+              View more
+              Design
+              Sketch</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10 ">
+            <div class="tab-content hidden" id="side-projects">
+              <h2>Side Projects</h2>
+
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-xs-12 col-lg-4 ">
+                    <div class="card card-white center-inside margined-bottom margin-l-r-auto">
+                      <img src="images/logo_bookshare_blue.png" alt="">
+                      <a href="" class="card-link"></a>
+                    </div>
+                    <!-- insert <div class="card"> -->
+                  </div>
+                  <div class="col-xs-12 col-lg-4 ">
+                    <div class="card card-white center-inside margined-bottom margin-l-r-auto">
+                      <img src="images/logo_easycat.png" alt="">
+                      <a href="" class="card-link"></a>
+                      </div>
+                    <!-- insert <div class="card"> -->
+                  </div>
+                  <div class="col-xs-12 col-lg-4">
+                    <div class="card card-white center-inside margined-bottom margin-l-r-auto">
+                      <img src="images/Foodelice-logo-grey.png" alt="">
+                      <a href="" class="card-link"></a>
+                    </div>
+                    <!-- insert <div class="card"> -->
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10 ">
+            <div class="tab-content hidden" id="activities">
+              <h2>Activities</h2>
+              <p>Master 104 Association
+              President of the association of the master Finance 104
+              2012 - 2013
+              Organisation of conferences with professionals
+              Organisation of a skiing trop (28 participants)
+              Cheer Up! Federation
+              National association to fight against cancer
+              2010 - 2012
+              Communication team member
+              Logistics team member for training weekends (250 participants)</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>

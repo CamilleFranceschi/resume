@@ -1,0 +1,49 @@
+#sidebar {
+  position: fixed;
+  width: 250px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $gray-extra-light;
+}
+
+#page-content {
+  margin-left: 250px;
+}
+
+.tabs-column {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+}
+
+.tab-column {
+  text-decoration: none;
+}
+
+
+.tab-column:hover {
+    background: rgba(26, 165, 154,0.2);
+    cursor: pointer;
+    text-decoration: none;
+    // opacity: 0.8;
+}
+.tab-column.active {
+    background: rgba(26, 165, 154,0.2);
+    border-left: 6px solid $green;
+    color: #4A4A4A;
+    letter-spacing: 0.5px;
+}
+
+#sidebar-head {
+  color: $gray-dark;
+}
+
+
+#sidebar-body {
+}
+
+
+#sidebar-body h5 {
+ color: $gray-darker;
+}

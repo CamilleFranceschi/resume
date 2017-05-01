@@ -10,9 +10,21 @@
   padding-bottom: 5em;
 }
 
+.padded-light {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.padded-light-left {
+  padding-left: 20px;
+}
 
 .margined-bottom {
   margin-bottom: 5%;
+}
+
+.margined-top {
+  margin-top: 30%;
 }
 
 .margin-l-r-auto {
@@ -37,5 +49,20 @@
 .center-inside {
   display: flex;
   justify-content: space-around;
+  flex-direction:column;
   align-items: center;
+}
+
+.center-inside-full-page {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.height-all {
+height: 100%;
 }

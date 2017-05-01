@@ -1,20 +1,22 @@
 .card {
   border-radius: $border-radius-base;
+  padding: 20px;
+  margin: 20px 0;
+  position:relative;
+}
+
+
+.card-grey {
+  background-color: $gray-extra-light;
+  // justify-content: space-between;
 }
 
 .card-white {
-  background-color: white;
-  justify-content: space-between;
-  padding: 40px;
-  margin: 40px 0;
-}
-
-.card-grey {
   height: 120px;
   width: 260px;
   padding: 20px;
   position: relative;
-  background-color: $gray-extra-light;
+  background-color: white;
 }
 
 
@@ -42,3 +44,5 @@
   // background: black;
   // opacity: 0;
 }
+
+
