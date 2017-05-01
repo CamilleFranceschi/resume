@@ -7,8 +7,31 @@
   background-color: $gray-extra-light;
 }
 
-#page-content {
-  margin-left: 250px;
+// #page-content {
+//   margin-left: 250px;
+// }
+
+#page-content.toggled {
+    margin-left: 250px;
+}
+
+
+#menu {
+    position: fixed;
+    top: 11px;
+    font-size: 23px;
+    color: #E6E6E6;
+    z-index: 1060;
+    transition: 0.3s, ease;
+
+}
+
+#menu.lefted {
+    left: 198px;
+}
+
+#menu.relefted {
+    left: 20px;
 }
 
 .tabs-column {
