@@ -92,27 +92,49 @@
                       </p>
                     </div>
                     <div class="product-date">
-                    <p><%= info["date"] %></p>
+                      <p><%= info["date"] %></p>
                     </div>
                   </div>
                 <% end %>
               <% end %>
+            </div>
+          </div>
+        </div>
 
 
         <div class="row">
           <div class="col-md-offset-1 col-md-10">
             <div class="tab-content hidden" id ="education">
               <h2>Education</h2>
-              <p>Paris Dauphine University
-              September 2008 - January 2013
-              Master of Science in Quantitative Finance (104)
-              Licence of Mathematics and Computer Science
-              HEC Lausanne
-              February 2013 - July 2013
-              Master of Science in Corporate Finance</p>
+              <% data.educations.each do |exp| %>
+                <% exp.each do |name, info| %>
+                  <div class="product card-grey product-flex">
+                    <div class="product-logo">
+                      <a href="https://www.lewagon.com/">
+                      <%= image_tag info["logo"], class: "logo-size-small" %>
+                      </a>
+                    </div>
+                    <div class="product-detail padded-light-left">
+                      <h4><%= info["title"] %></h4>
+                      <p><em><%= info["subtitle"] %></em></p>
+                      <ul>
+                      <% info["diplomas"].each_value do |content|%>
+                        <li> <%= content %> </li>
+                      <% end %>
+                      </ul>
+                    </div>
+                    <div class="product-date">
+                    <p><%= info["date"] %></p>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
             </div>
           </div>
         </div>
+
+
+
 
         <div class="row">
           <div class="col-md-offset-1 col-md-10 ">

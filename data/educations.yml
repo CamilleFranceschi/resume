@@ -4,17 +4,16 @@
     subtitle: 9 week bootcamp, n. 1 bootcamp on webiste X
     diplomas:
       d1: Full stack knowledge - rails
-    date:
+    date: France, 02/17 - 04/17
 
 
 - hec_lausanne:
     logo: lewagon.png
     title: HEC Lausanne
-    subtitle: Top tier university in France
+    subtitle: Best school in Switzerland
     diplomas:
-      d1: Master of Science in Quantitative Finance (104)
-      d2: Licence of Mathematics and Computer Science
-    date:
+      d1: Master of Science in Corporate Finance
+    date: Switzerland, 02/13 - 07/13
 
 - dauphine:
     logo: lewagon.png
@@ -23,4 +22,4 @@
     diplomas:
       d1: Master of Science in Quantitative Finance (104)
       d2: Licence of Mathematics and Computer Science
-    date:
+    date: France, 09/08 - 01/13
