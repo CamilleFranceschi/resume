@@ -140,6 +140,103 @@
           <div class="col-md-offset-1 col-md-10 ">
             <div class="tab-content hidden" id="skills">
               <h2>Skills</h2>
+
+
+              <canvas id="business" height="130" width="130"></canvas>
+
+              <h5>Business</h5>
+
+              <p>Market & business analysis
+              <br>Financial analysis
+              <br>Financial modelisation</p>
+
+              <div class="box">
+
+                <div class="button">View more</div>
+
+                <div class="content">
+
+                  <div class="skills-details">
+                    <p>R/Matlab/Java</p>
+                    <div class="align-dots">
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle-thin"></i>
+                      <i class="fa fa-circle-thin"></i>
+                      <i class="fa fa-circle-thin"></i>
+                      <i class="fa fa-circle-thin"></i>
+                    </div>
+                  </div>
+
+                  <div class="skills-details">
+                    <p>VBA</p>
+                    <div class="align-dots">
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle-thin"></i>
+                      <i class="fa fa-circle-thin"></i>
+                      <i class="fa fa-circle-thin"></i>
+                    </div>
+                  </div>
+
+                  <div class="skills-details">
+                    <p>HTML/CSS</p>
+                    <div class="align-dots">
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle-thin"></i>
+                      <i class="fa fa-circle-thin"></i>
+                      <i class="fa fa-circle-thin"></i>
+                    </div>
+                  </div>
+
+                  <div class="skills-details">
+                    <p>Javascript/jQuery</p>
+                    <div class="align-dots">
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle-thin"></i>
+                    </div>
+                  </div>
+
+                  <div class="skills-details">
+                    <p>Ruby/Ruby on Rails</p>
+                    <div class="align-dots">
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle"></i>
+                      <i class="fa fa-circle-thin"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <script>
+                var options = {
+                  percentageInnerCutout: 80
+                };
+                var doughnutData = [
+                    {
+                      value: 70,
+                      color:"#297CBB"
+                    },
+                    {
+                      value : 30,
+                      color : "#e4e4e4"
+                    }
+                  ];
+
+                  var myDoughnut = new Chart(document.getElementById("business").getContext("2d")).Doughnut(doughnutData, options);
+              </script>
+
               <p>Business
               Market & business analysis
               Financial analysis
