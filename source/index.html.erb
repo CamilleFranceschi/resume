@@ -68,70 +68,36 @@
             <div class="tab-content hidden" id="experiences">
               <h2>Experiences</h2>
 
-              <div class="product card-grey product-flex">
-                <div class="product-logo">
-                  <a href="https://www.lewagon.com/">
-                  <%= image_tag "lewagon.png", class: "logo-size-small" %>
-                  </a>
-                </div>
-                <div class="product-detail padded-light-left">
-                  <h4>Le Wagon, former tart-up</h4>
-                  <p><em>9 intensive weeks bootcamp to learn all the web stack. From the database to the browser.</em></p>
-                  <p>Teacher assistant on :<br>
-                  Ruby OOP<br>
-                  SQL & ActiveRecord<br>
-                  Front CSS, HTML, Bootstrap, Flexbox<br>
-                  Rails</p>
-                  <p><b>Key learning points: </b><span class="label label-success">Ability to share my knowledge</span> <span class="label label-success">Reinforcement of the basis learnt during bootcamp</span></p>
-                </div>
-                <div class="product-date">
-                <p>Paris & London, 04/17 - present</p>
-                </div>
-              </div>
+              <% data.experiences.each do |exp| %>
+                <% exp.each do |name, info| %>
+                  <div class="product card-grey product-flex">
+                    <div class="product-logo">
+                      <a href="https://www.lewagon.com/">
+                      <%= image_tag info["logo"], class: "logo-size-small" %>
+                      </a>
+                    </div>
+                    <div class="product-detail padded-light-left">
+                      <h4><%= info["title"] %></h4>
+                      <p><em><%= info["content"]["subtitle"] %></em></p>
+                      <ul>
+                      <% info["content"]["bullets"].each_value do |content|%>
+                        <li> <%= content %> </li>
+                      <% end %>
+                      </ul>
 
-              <div class="product card-grey product-flex">
-                <div class="product-logo">
-                  <a href="http://www.jobora.fr/">
-                  <%= image_tag "logo-jobora.png", class: "logo-size-small" %>
-                  </a>
-                </div>
-                <div class="product-detail padded-light-left">
-                  <h4>JOBORA, start-up</h4>
-                  <p><em>Career marketplace for retail and services industries</em></p>
-                  <p>Structure the entire process<br>
-                  Build business metrics<br>
-                  Work on fundraising<br>
-                  Build the business plan & roadmap</p>
-                  <p><b>Key learning points: </b><span class="label label-success">start-up philosophy</span> <span class="label label-success">be flexible to do every task </span></p>
-                </div>
-                <div class="product-date">
-                <p>Paris, 08/16 - 01/17</p>
-                </div>
-              </div>
+                      <p><b>Key learning points: </b>
+                        <% info["learning_points"].each_value do |content|%>
+                          <span class="label label-success"> <%= content %> </span>
+                        <% end %>
+                      </p>
+                    </div>
+                    <div class="product-date">
+                    <p><%= info["date"] %></p>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
 
-              <div class="product product-grey product-flex">
-                <div class="card-logo">
-                  <a href="http://www.financieredulion.com/">
-                  <%= image_tag "logo-cfl.png", class: "logo-size-small" %>
-                  </a>
-                </div>
-                <div class="product-detail padded-light-left">
-                  <h4>CFL, M&A Boutique</h4>
-                  <p><em>M&A boutique specialized in transport, energy and environment</em></p>
-                  <p>Sectorial studies<br>
-                  Business and Financial modelisation (geothermal unit, CCGT)<br>
-                  Valuation<br>
-                  Participation to entire negociations(shareholders agreement & Investment agreement)</br>
-                  Worked on deals from 9m€ to €16.7bn EnV (RTE, Nice Airport,Géothermie Bouillante, Vergnet Hydro)</p>
-                  <p><b>Key learning points: </b><span class="label label-success">Modelisation</span> <span class="label label-success">hard-working</span> <span class="label label-success">learn by myself</span> <span class="label label-success">make it work whatever the problem is</span></p>
-                </div>
-                <div class="product-date">
-                  <p>Paris, 09/13 - 07/16</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="row">
           <div class="col-md-offset-1 col-md-10">

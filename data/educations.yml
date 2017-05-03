@@ -1,0 +1,26 @@
+- le_wagon:
+    logo: lewagon.png
+    title: Le Wagon
+    subtitle: 9 week bootcamp, n. 1 bootcamp on webiste X
+    diplomas:
+      d1: Full stack knowledge - rails
+    date:
+
+
+- hec_lausanne:
+    logo: lewagon.png
+    title: HEC Lausanne
+    subtitle: Top tier university in France
+    diplomas:
+      d1: Master of Science in Quantitative Finance (104)
+      d2: Licence of Mathematics and Computer Science
+    date:
+
+- dauphine:
+    logo: lewagon.png
+    title: Paris Dauphine University
+    subtitle: Top tier university in France
+    diplomas:
+      d1: Master of Science in Quantitative Finance (104)
+      d2: Licence of Mathematics and Computer Science
+    date:
