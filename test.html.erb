@@ -1,0 +1,40 @@
+                    <div class= "text-center">
+                      <canvas id= "<%= name %>" height="130" width="130"></canvas>
+                      <h5><%= info["title"] %></h5>
+
+                      <% info["bullets"].each_value do |content| %>
+                        <p><%= content %></p>
+                      <% end %>
+
+                      <div class = "btn-green btn-size-small margined-top">
+                        View more
+                      </div>
+
+                      <% info["bullets"].each do |content| %>
+                        <p><%= content %></p>
+                        <% content["n1"].times do  %>
+                          <i class = "fa fa-circle"></i>
+                        <% end %>
+                        <% (6 - content["n1"]).times do  %>
+                          <i class="fa fa-circle-thin"></i>
+                        <% end %>
+                      <% end %>
+
+                    </div>
+                    <script>
+                      var options = {
+                        percentageInnerCutout: 80
+                      };
+                      var doughnutData = [
+                          {
+                            value: 70,
+                            color: "#1AA59A"
+                          },
+                          {
+                            value : 30,
+                            color : "#FBFBFB"
+                          }
+                        ];
+
+                        var myDoughnut = new Chart(document.getElementById("<%= name %>").getContext("2d")).Doughnut(doughnutData, options);
+                    </script>

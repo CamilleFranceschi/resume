@@ -1,0 +1,28 @@
+- business:
+    title: Business
+    bullets:
+      b1: Market & business analysis
+      b2: Financial analysis
+      b3: Financial modelisation
+    numbers:
+      n1: 1
+      n2: 3
+      n3: 3
+- programming:
+    title: Programming
+    bullets:
+      b1: VBA
+      b2: HTML/CSS
+      b3: Javascript/jQuery
+      b4: Ruby/Ruby on Rails
+    numbers:
+      n1: 1
+      n2: 3
+      n3: 3
+      n4: 5
+- design:
+    title: Design
+    bullets:
+      b1: Sketch
+    numbers:
+      n1: 1

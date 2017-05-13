@@ -1,19 +1,25 @@
 <!-- <div class="banner" style="background-image: linear-gradient(-199deg, rgba(146,157,144,0.6) 3%, rgba(0,35,23,0) 24%), url('images/surfer.jpg');"> -->
   <div id="sidebar">
     <div class="text-center" id="sidebar-head">
-      <div class="center-inside">
+      <div class="center-inside-column">
         <%= image_tag "avatar-camille.png", class: "avatar avatar-medium avatar-border-white margined-top" %>
         <h4><b>Camille Franceschi</b>
         <br><br>
         <ul class="list-inline">
           <li>
-            <i class="fa fa-envelope fa" aria-hidden="true"></i>
+            <a href="mailto:franceschi.camille@gmail.com">
+              <i class="fa fa-envelope fa" aria-hidden="true"></i>
+            </a>
           </li>
           <li>
-            <i class="fa fa-github fa" aria-hidden="true"></i>
+            <a href="https://github.com/CamilleFranceschi">
+              <i class="fa fa-github fa" aria-hidden="true"></i>
+            </a>
           </li>
           <li>
-            <i class="fa fa-linkedin fa" aria-hidden="true"></i>
+            <a href="https://www.linkedin.com/in/camille-franceschi-64499940">
+              <i class="fa fa-linkedin fa" aria-hidden="true"></i>
+            </a>
           </li>
         </ul>
         </h4>
@@ -43,7 +49,6 @@
         </a>
       </div>
     </div>
-
   </div>
 
   <div id="page-content" class="toggled">
@@ -52,7 +57,8 @@
         <a href="#" id="menu" class="lefted">
           <i class="fa fa-bars"></i>
         </a>
-        <div class="row">
+
+        <div class="rows">
           <div class="col-md-offset-1 col-md-10">
             <div class="card tab-content" id="about">
               <h1>Hello, I am Camille Franceschi</h1>
@@ -133,124 +139,68 @@
           </div>
         </div>
 
-
-
-
         <div class="row">
-          <div class="col-md-offset-1 col-md-10 ">
+          <div class="col-md-offset-1 col-md-10">
             <div class="tab-content hidden" id="skills">
               <h2>Skills</h2>
+              <!-- <div class="product card-grey product-flex"> -->
+              <div class="center-inside-row-start">
+                <% data.skills.each do |skill| %>
+                  <% skill.each do |name, info| %>
+                    <div class= "text-center">
+                      <canvas id= "<%= name %>" height="130" width="130"></canvas>
+                      <h5><%= info["title"] %></h5>
+
+                      <% info["bullets"].each_value do |content| %>
+                        <div>
+                          <%= content %>
+                        </div>
+                      <% end %>
+
+                      <div class = "btn-green btn-size-small margined-top skill-detail">
+                        View more
+                      </div>
+
+                      <% count = 1 %>
+
+                      <div class="hidden skill-to-hide">
+                        <% info["numbers"].each_value do |number| %>
+                          <%= info["bullets"]["b#{count}"] %>
+                          <div>
+                           <% number.times do %>
+                            <i class = "fa fa-circle"></i>
+                            <% end %>
+                            <% (6 - number).times do %>
+                              <i class="fa fa-circle-thin"></i>
+                            <% end %>
+                            <% count += 1 %>
+                          </div>
+                        <% end %>
+                      </div>
 
 
-              <canvas id="business" height="130" width="130"></canvas>
-
-              <h5>Business</h5>
-
-              <p>Market & business analysis
-              <br>Financial analysis
-              <br>Financial modelisation</p>
-
-              <div class="box">
-
-                <div class="button">View more</div>
-
-                <div class="content">
-
-                  <div class="skills-details">
-                    <p>R/Matlab/Java</p>
-                    <div class="align-dots">
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle-thin"></i>
-                      <i class="fa fa-circle-thin"></i>
-                      <i class="fa fa-circle-thin"></i>
-                      <i class="fa fa-circle-thin"></i>
                     </div>
-                  </div>
+                    <script>
+                      var options = {
+                        percentageInnerCutout: 80
+                      };
+                      var doughnutData = [
+                          {
+                            value: 70,
+                            color: "#1AA59A"
+                          },
+                          {
+                            value : 30,
+                            color : "#FBFBFB"
+                          }
+                        ];
 
-                  <div class="skills-details">
-                    <p>VBA</p>
-                    <div class="align-dots">
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle-thin"></i>
-                      <i class="fa fa-circle-thin"></i>
-                      <i class="fa fa-circle-thin"></i>
-                    </div>
-                  </div>
-
-                  <div class="skills-details">
-                    <p>HTML/CSS</p>
-                    <div class="align-dots">
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle-thin"></i>
-                      <i class="fa fa-circle-thin"></i>
-                      <i class="fa fa-circle-thin"></i>
-                    </div>
-                  </div>
-
-                  <div class="skills-details">
-                    <p>Javascript/jQuery</p>
-                    <div class="align-dots">
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle-thin"></i>
-                    </div>
-                  </div>
-
-                  <div class="skills-details">
-                    <p>Ruby/Ruby on Rails</p>
-                    <div class="align-dots">
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle"></i>
-                      <i class="fa fa-circle-thin"></i>
-                    </div>
-                  </div>
-                </div>
-
+                        var myDoughnut = new Chart(document.getElementById("<%= name %>").getContext("2d")).Doughnut(doughnutData, options);
+                    </script>
+                  <% end %>
+                <% end %>
+              <!-- </div> -->
               </div>
-
-              <script>
-                var options = {
-                  percentageInnerCutout: 80
-                };
-                var doughnutData = [
-                    {
-                      value: 70,
-                      color:"#297CBB"
-                    },
-                    {
-                      value : 30,
-                      color : "#e4e4e4"
-                    }
-                  ];
-
-                  var myDoughnut = new Chart(document.getElementById("business").getContext("2d")).Doughnut(doughnutData, options);
-              </script>
-
-              <p>Business
-              Market & business analysis
-              Financial analysis
-              Financial modelisation
-              View more
-              Programming
-              R/Matlab/Java
-              VBA
-              HTML/CSS
-              Javascript/jQuery
-              Ruby/Ruby on Rails
-              View more
-              Design
-              Sketch</p>
             </div>
           </div>
         </div>
@@ -263,21 +213,21 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-xs-12 col-lg-4 ">
-                    <div class="card card-white center-inside margined-bottom margin-l-r-auto">
+                    <div class="card card-white center-inside-column margined-bottom margin-l-r-auto">
                       <img src="images/logo_bookshare_blue.png" alt="">
                       <a href="" class="card-link"></a>
                     </div>
                     <!-- insert <div class="card"> -->
                   </div>
                   <div class="col-xs-12 col-lg-4 ">
-                    <div class="card card-white center-inside margined-bottom margin-l-r-auto">
+                    <div class="card card-white center-inside-column margined-bottom margin-l-r-auto">
                       <img src="images/logo_easycat.png" alt="">
                       <a href="" class="card-link"></a>
                       </div>
                     <!-- insert <div class="card"> -->
                   </div>
                   <div class="col-xs-12 col-lg-4">
-                    <div class="card card-white center-inside margined-bottom margin-l-r-auto">
+                    <div class="card card-white center-inside-column margined-bottom margin-l-r-auto">
                       <img src="images/Foodelice-logo-grey.png" alt="">
                       <a href="" class="card-link"></a>
                     </div>
@@ -285,7 +235,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

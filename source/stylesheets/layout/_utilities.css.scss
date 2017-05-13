@@ -46,12 +46,28 @@
   background: #3b5998;
 }
 
-.center-inside {
+.center-inside-column {
   display: flex;
   justify-content: space-around;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
 }
+
+
+.center-inside-row{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.center-inside-row-start{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 
 .center-inside-full-page {
   display: flex;
