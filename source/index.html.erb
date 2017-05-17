@@ -63,8 +63,8 @@
             <div class="card tab-content" id="about">
               <h1>Hello, I am Camille Franceschi</h1>
               <h2>A bit about me</h2>
-              <p> Learned mathematics first to do finance, lost in financial jobs lacking a little bit of technics for my taste, I decided to stop and to do Le Wagon bootcamp to learn to code.</p>
-              <p> Hard worker, enthusiastic to learn new things every day I am looking for a <span class="label label-success">job as Developer</span>.</p>
+              <p> 3 years of M&A background, a first esperience in a start-up as Operations Manager and freshly graduated from Le Wagon bootcamp.</p>
+              <p> Hard worker, enthusiastic to learn new things every day I am looking for a <span class="label label-success">job as Web Developer</span>.</p>
             </div>
           </div>
         </div>
@@ -103,6 +103,7 @@
                   </div>
                 <% end %>
               <% end %>
+
             </div>
           </div>
         </div>
@@ -145,6 +146,7 @@
               <h2>Skills</h2>
               <!-- <div class="product card-grey product-flex"> -->
               <div class="center-inside-row-start">
+                  <% counter = 1 %>
                 <% data.skills.each do |skill| %>
                   <% skill.each do |name, info| %>
                     <div class= "text-center">
@@ -157,13 +159,14 @@
                         </div>
                       <% end %>
 
-                      <div class = "btn-green btn-size-small margined-top skill-detail">
+                      <div class = "btn-green btn-size-small margined-top skill-detail-<%= counter %>">
                         View more
                       </div>
+                      <% counter += 1 %>
 
                       <% count = 1 %>
 
-                      <div class="hidden skill-to-hide">
+                      <div class="hidden skill-to-hide-<%= counter %>">
                         <% info["numbers"].each_value do |number| %>
                           <%= info["bullets"]["b#{count}"] %>
                           <div>
@@ -178,8 +181,22 @@
                         <% end %>
                       </div>
 
+                      <div id="player"></div>
 
                     </div>
+
+                    <% content_for(:after_js) do %>
+                      <script>
+                        $(function(){
+                          $(".skill-detail-"+ <%= counter %>).on("click", function(e){
+                            // Change active tab
+                            console.log(".skill-detail-"+ <%= counter %>);
+                            $(".skill-to-hide-"+ <%= counter %>).toggleClass('hidden');
+                          });
+                        });
+                      </script>
+                    <% end %>
+
                     <script>
                       var options = {
                         percentageInnerCutout: 80
@@ -197,6 +214,80 @@
 
                         var myDoughnut = new Chart(document.getElementById("<%= name %>").getContext("2d")).Doughnut(doughnutData, options);
                     </script>
+
+                    <script>
+                      // 2. This code loads the IFrame Player API code asynchronously.
+                      var tag = document.createElement('script');
+                      tag.src = "https://www.youtube.com/iframe_api";
+                      var firstScriptTag = document.getElementsByTagName('script')[0];
+                      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                      // var currentVideoId = null;
+
+                      // 3. This function creates an <iframe> (and YouTube player)
+                      //    after the API code downloads.
+                      var player;
+                      function onYouTubeIframeAPIReady() {
+                        player = new YT.Player('player', {
+                          height: '360',
+                          width: '640',
+                          videoId: '',
+                          events: {
+                            // 'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                          }
+                        });
+                      }
+
+                      // 4. The API will call this function when the video player is ready.
+                      // function onPlayerReady(event) {
+                      //   event.target.playVideo();
+                      // }
+
+
+                      // 5. The API calls this function when the player's state changes.
+                      //    The function indicates that when playing a video (state=1),
+                      //    the player should play for six seconds and then stop.
+                      var done = false;
+                      function onPlayerStateChange(event) {
+                        if (event.data == YT.PlayerState.PLAYING && !done) {
+                          setTimeout(stopVideo, 6000);
+                          done = true;
+                        }
+                      }
+                      function stopVideo() {
+                        player.stopVideo();
+                      }
+                      // 6. This function searches for videos related to the keyword 'dogs'.
+                      //    The video IDs and titles of the search results are logged to Apps Script's log.
+
+                      function searchByKeyword() {
+                        var results = YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 1});
+                        console.log(results)
+                      }
+
+                      $(".test").click(function(event){
+                        var q_attribute = event.target.getAttribute('q');
+                        var q_encoded = encodeURIComponent(q_attribute);
+                        var key = "AIzaSyAdF0b05v_zbxg2otFoNJfCfmjVu3jNEw0";
+                        // Call Youtube API
+                        var http_request = "https://www.googleapis.com/youtube/v3/search?part=snippet&q="+q_encoded+"&key="+key+"";
+                        $.ajax({
+                            type: "GET",
+                            url: http_request,
+                            dataType: "json",
+                            success: function(data) {
+                                var videoId = data.items[0].id.videoId;
+                                //  To Dynamically change Youtube Player videoID
+                                player.loadVideoById(videoId);
+                            },
+                            error: function(result) {
+                                alert("Error");
+                            }
+                        });
+                      });
+                    </script>
+
                   <% end %>
                 <% end %>
               <!-- </div> -->
@@ -243,16 +334,32 @@
           <div class="col-md-offset-1 col-md-10 ">
             <div class="tab-content hidden" id="activities">
               <h2>Activities</h2>
-              <p>Master 104 Association
-              President of the association of the master Finance 104
-              2012 - 2013
-              Organisation of conferences with professionals
-              Organisation of a skiing trop (28 participants)
-              Cheer Up! Federation
-              National association to fight against cancer
-              2010 - 2012
-              Communication team member
-              Logistics team member for training weekends (250 participants)</p>
+
+              <% data.activities.each do |exp| %>
+                <% exp.each do |name, info| %>
+                  <div class="product card-grey product-flex">
+                    <div class="product-logo">
+                      <a href="https://www.lewagon.com/">
+                      <%= image_tag info["logo"], class: "logo-size-small" %>
+                      </a>
+                    </div>
+                    <div class="product-detail padded-light-left">
+                      <h4><%= info["title"] %></h4>
+                      <p><em><%= info["subtitle"] %></em></p>
+                      <ul>
+                      <% info["content"]["bullets"].each_value do |content|%>
+                        <li> <%= content %> </li>
+                      <% end %>
+                      </ul>
+
+                    </div>
+                    <div class="product-date">
+                      <p><%= info["date"] %></p>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+
             </div>
           </div>
         </div>
