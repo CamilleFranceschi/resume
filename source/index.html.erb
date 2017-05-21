@@ -1,11 +1,11 @@
-<!-- <div class="banner" style="background-image: linear-gradient(-199deg, rgba(146,157,144,0.6) 3%, rgba(0,35,23,0) 24%), url('images/surfer.jpg');"> -->
-  <div id="sidebar">
-    <div class="text-center" id="sidebar-head">
-      <div class="center-inside-column">
+<div id="wrapper" class="toggled">
+  <div id="sidebar-wrapper" class="hidden-xs">
+    <div class="sidebar-nav">
+      <div class="center-inside-column" id="sidebar-head">
         <%= image_tag "avatar-camille.png", class: "avatar avatar-medium avatar-border-white margined-top" %>
         <h4><b>Camille Franceschi</b>
         <br><br>
-        <ul class="list-inline">
+        <ul class="list-inline text-center">
           <li>
             <a href="mailto:franceschi.camille@gmail.com">
               <i class="fa fa-envelope fa" aria-hidden="true"></i>
@@ -24,178 +24,175 @@
         </ul>
         </h4>
       </div>
-    </div>
+      <div id="sidebar-body">
+        <div class="tabs-column padded-light" >
 
-    <div class="wrapper height-all" id="sidebar-body">
-      <div class="tabs-column padded-light" >
-
-        <a class="tab-column padded-light-left active" data-target="#about">
-          <h5>About</h5>
-        </a>
-        <a class="tab-column padded-light-left" data-target="#experiences">
-          <h5>Experiences</h5>
-        </a>
-        <a class="tab-column padded-light-left" data-target="#education">
-          <h5>Education</h5>
-        </a>
-        <a class="tab-column padded-light-left" data-target="#skills">
-          <h5>Skills</h5>
-        </a>
-        <a class="tab-column padded-light-left" data-target="#side-projects">
-          <h5>Side projects</h5>
-        </a>
-        <a class="tab-column padded-light-left" data-target="#activities">
-          <h5>Activities</h5>
-        </a>
+          <a class="tab-column padded-light-left active" data-target="#about">
+            <h5>About</h5>
+          </a>
+          <a class="tab-column padded-light-left" data-target="#experiences">
+            <h5>Experiences</h5>
+          </a>
+          <a class="tab-column padded-light-left" data-target="#education">
+            <h5>Education</h5>
+          </a>
+          <a class="tab-column padded-light-left" data-target="#skills">
+            <h5>Skills</h5>
+          </a>
+          <a class="tab-column padded-light-left" data-target="#side-projects">
+            <h5>Side projects</h5>
+          </a>
+          <a class="tab-column padded-light-left" data-target="#activities">
+            <h5>Activities</h5>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
-  <div id="page-content" class="toggled">
-    <div class="wrapper center-inside-full-page">
-      <div class="container">
-        <a href="#" id="menu" class="lefted">
-          <i class="fa fa-bars"></i>
-        </a>
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <a href="#" id="menu-toggle">
+        <i class="fa fa-bars"></i>
+      </a>
 
-        <div class="rows">
-          <div class="col-md-offset-1 col-md-10">
-            <div class="card tab-content" id="about">
-              <h1>Hello, I am Camille Franceschi</h1>
-              <h2>A bit about me</h2>
-              <p> 3 years of M&A background, a first esperience in a start-up as Operations Manager and freshly graduated from Le Wagon bootcamp.</p>
-              <p> Hard worker, enthusiastic to learn new things every day I am looking for a <span class="label label-success">job as Web Developer</span>.</p>
-            </div>
+      <div class="row">
+        <div class="col-xs-offset-1 col-xs-10">
+          <div class="card tab-content" id="about">
+            <h1>Hello, I am Camille Franceschi</h1>
+            <h2>A bit about me</h2>
+            <p> 3 years of M&A background, a first experience in a start-up as Operations Manager, freshly graduated from Le Wagon Bootcamp and a current part-time job as Teacher Assistant also at le Wagon bootcamp.</p>
+            <p> Hard worker, enthusiastic to learn new things every day, I am looking for a new challenge as <span class="label label-success">junior Web Developer</span>. Interested in learning React.</p>
           </div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="col-md-offset-1 col-md-10">
-            <div class="tab-content hidden" id="experiences">
-              <h2>Experiences</h2>
+      <div class="row">
+        <div class="col-xs-offset-1 col-xs-10">
+          <div class="tab-content hidden" id="experiences">
+            <h2>Experiences</h2>
 
-              <% data.experiences.each do |exp| %>
-                <% exp.each do |name, info| %>
-                  <div class="product card-grey product-flex">
-                    <div class="product-logo">
-                      <a href="https://www.lewagon.com/">
-                      <%= image_tag info["logo"], class: "logo-size-small" %>
-                      </a>
-                    </div>
-                    <div class="product-detail padded-light-left">
-                      <h4><%= info["title"] %></h4>
-                      <p><em><%= info["content"]["subtitle"] %></em></p>
-                      <ul>
-                      <% info["content"]["bullets"].each_value do |content|%>
-                        <li> <%= content %> </li>
-                      <% end %>
-                      </ul>
-
-                      <p><b>Key learning points: </b>
-                        <% info["learning_points"].each_value do |content|%>
-                          <span class="label label-success"> <%= content %> </span>
-                        <% end %>
-                      </p>
-                    </div>
-                    <div class="product-date">
-                      <p><%= info["date"] %></p>
-                    </div>
+            <% data.experiences.each do |exp| %>
+              <% exp.each do |name, info| %>
+                <div class="product card-grey product-flex">
+                  <div class="product-logo">
+                    <a href="https://www.lewagon.com/">
+                    <%= image_tag info["logo"], class: "logo-size-small" %>
+                    </a>
                   </div>
-                <% end %>
-              <% end %>
+                  <div class="product-detail padded-light-left">
+                    <h4><%= info["title"] %></h4>
+                    <p><em><%= info["content"]["subtitle"] %></em></p>
+                    <ul>
+                    <% info["content"]["bullets"].each_value do |content|%>
+                      <li> <%= content %> </li>
+                    <% end %>
+                    </ul>
 
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row">
-          <div class="col-md-offset-1 col-md-10">
-            <div class="tab-content hidden" id ="education">
-              <h2>Education</h2>
-              <% data.educations.each do |exp| %>
-                <% exp.each do |name, info| %>
-                  <div class="product card-grey product-flex">
-                    <div class="product-logo">
-                      <a href="https://www.lewagon.com/">
-                      <%= image_tag info["logo"], class: "logo-size-small" %>
-                      </a>
-                    </div>
-                    <div class="product-detail padded-light-left">
-                      <h4><%= info["title"] %></h4>
-                      <p><em><%= info["subtitle"] %></em></p>
-                      <ul>
-                      <% info["diplomas"].each_value do |content|%>
-                        <li> <%= content %> </li>
+                    <p><b>Key learning points: </b>
+                      <% info["learning_points"].each_value do |content|%>
+                        <span class="label label-success"> <%= content %> </span>
                       <% end %>
-                      </ul>
-                    </div>
-                    <div class="product-date">
+                    </p>
+                  </div>
+                  <div class="product-date">
                     <p><%= info["date"] %></p>
-                    </div>
                   </div>
-                <% end %>
+                </div>
               <% end %>
-            </div>
+            <% end %>
+
           </div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="col-md-offset-1 col-md-10">
-            <div class="tab-content hidden" id="skills">
-              <h2>Skills</h2>
-              <!-- <div class="product card-grey product-flex"> -->
-              <div class="center-inside-row-start">
-                  <% counter = 1 %>
-                <% data.skills.each do |skill| %>
-                  <% skill.each do |name, info| %>
-                    <div class= "text-center">
-                      <canvas id= "<%= name %>" height="130" width="130"></canvas>
-                      <h5><%= info["title"] %></h5>
 
-                      <% info["bullets"].each_value do |content| %>
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+          <div class="tab-content hidden" id ="education">
+            <h2>Education</h2>
+            <% data.educations.each do |exp| %>
+              <% exp.each do |name, info| %>
+                <div class="product card-grey product-flex">
+                  <div class="product-logo">
+                    <a href="https://www.lewagon.com/">
+                    <%= image_tag info["logo"], class: "logo-size-small" %>
+                    </a>
+                  </div>
+                  <div class="product-detail padded-light-left">
+                    <h4><%= info["title"] %></h4>
+                    <p><em><%= info["subtitle"] %></em></p>
+                    <ul>
+                    <% info["diplomas"].each_value do |content|%>
+                      <li> <%= content %> </li>
+                    <% end %>
+                    </ul>
+                  </div>
+                  <div class="product-date">
+                  <p><%= info["date"] %></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+          <div class="tab-content hidden" id="skills">
+            <h2>Skills</h2>
+            <!-- <div class="product card-grey product-flex"> -->
+            <div class="center-inside-row-start">
+                <% counter = 1 %>
+              <% data.skills.each do |skill| %>
+                <% skill.each do |name, info| %>
+                  <div class= "text-center">
+                    <canvas id= "<%= name %>" height="130" width="130"></canvas>
+                    <h5><%= info["title"] %></h5>
+
+                    <% info["bullets"].each_value do |content| %>
+                      <div>
+                        <%= content %>
+                      </div>
+                    <% end %>
+
+                    <div class = "btn-green btn-size-small margined-top skill-detail-<%= counter %>">
+                      View more
+                    </div>
+                    <% counter += 1 %>
+
+                    <% count = 1 %>
+
+                    <div class="hidden skill-to-hide-<%= counter %>">
+                      <% info["numbers"].each_value do |number| %>
+                        <%= info["bullets"]["b#{count}"] %>
                         <div>
-                          <%= content %>
+                         <% number.times do %>
+                          <i class = "fa fa-circle"></i>
+                          <% end %>
+                          <% (6 - number).times do %>
+                            <i class="fa fa-circle-thin"></i>
+                          <% end %>
+                          <% count += 1 %>
                         </div>
                       <% end %>
-
-                      <div class = "btn-green btn-size-small margined-top skill-detail-<%= counter %>">
-                        View more
-                      </div>
-                      <% counter += 1 %>
-
-                      <% count = 1 %>
-
-                      <div class="hidden skill-to-hide-<%= counter %>">
-                        <% info["numbers"].each_value do |number| %>
-                          <%= info["bullets"]["b#{count}"] %>
-                          <div>
-                           <% number.times do %>
-                            <i class = "fa fa-circle"></i>
-                            <% end %>
-                            <% (6 - number).times do %>
-                              <i class="fa fa-circle-thin"></i>
-                            <% end %>
-                            <% count += 1 %>
-                          </div>
-                        <% end %>
-                      </div>
-
-                      <div id="player"></div>
-
                     </div>
 
-                    <% content_for(:after_js) do %>
-                      <script>
-                        $(function(){
-                          $(".skill-detail-"+ <%= counter %>).on("click", function(e){
-                            // Change active tab
-                            console.log(".skill-detail-"+ <%= counter %>);
-                            $(".skill-to-hide-"+ <%= counter %>).toggleClass('hidden');
-                          });
+                    <div id="player"></div>
+
+                  </div>
+
+                  <% content_for(:after_js) do %>
+                    <script>
+                      $(function(){
+                        $(".skill-detail-"+ <%= counter %>).on("click", function(e){
+                          // Change active tab
+                          console.log(".skill-detail-"+ <%= counter %>);
+                          $(".skill-to-hide-"+ <%= counter %>).toggleClass('hidden');
                         });
-                      </script>
-                    <% end %>
+                      });
+                    </script>
 
                     <script>
                       var options = {
@@ -287,82 +284,84 @@
                         });
                       });
                     </script>
-
                   <% end %>
+
                 <% end %>
-              <!-- </div> -->
-              </div>
+              <% end %>
+            <!-- </div> -->
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="col-md-offset-1 col-md-10 ">
-            <div class="tab-content hidden" id="side-projects">
-              <h2>Side Projects</h2>
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10 ">
+          <div class="tab-content hidden" id="side-projects">
+            <h2>Side Projects</h2>
 
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-xs-12 col-lg-4 ">
-                    <div class="card card-white center-inside-column margined-bottom margin-l-r-auto">
-                      <img src="images/logo_bookshare_blue.png" alt="">
-                      <a href="" class="card-link"></a>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xs-12 col-lg-4 ">
+                  <div class="card card-white center-inside-column margined-bottom margin-l-r-auto">
+                    <img src="images/logo_bookshare_blue.png" alt="">
+                    <a href="" class="card-link"></a>
+                  </div>
+                  <!-- insert <div class="card"> -->
+                </div>
+                <div class="col-xs-12 col-lg-4 ">
+                  <div class="card card-white center-inside-column margined-bottom margin-l-r-auto">
+                    <img src="images/logo_easycat.png" alt="">
+                    <a href="" class="card-link"></a>
                     </div>
-                    <!-- insert <div class="card"> -->
+                  <!-- insert <div class="card"> -->
+                </div>
+                <div class="col-xs-12 col-lg-4">
+                  <div class="card card-white center-inside-column margined-bottom margin-l-r-auto">
+                    <img src="images/Foodelice-logo-grey.png" alt="">
+                    <a href="" class="card-link"></a>
                   </div>
-                  <div class="col-xs-12 col-lg-4 ">
-                    <div class="card card-white center-inside-column margined-bottom margin-l-r-auto">
-                      <img src="images/logo_easycat.png" alt="">
-                      <a href="" class="card-link"></a>
-                      </div>
-                    <!-- insert <div class="card"> -->
-                  </div>
-                  <div class="col-xs-12 col-lg-4">
-                    <div class="card card-white center-inside-column margined-bottom margin-l-r-auto">
-                      <img src="images/Foodelice-logo-grey.png" alt="">
-                      <a href="" class="card-link"></a>
-                    </div>
-                    <!-- insert <div class="card"> -->
-                  </div>
+                  <!-- insert <div class="card"> -->
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="col-md-offset-1 col-md-10 ">
-            <div class="tab-content hidden" id="activities">
-              <h2>Activities</h2>
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10 ">
+          <div class="tab-content hidden" id="activities">
+            <h2>Activities</h2>
 
-              <% data.activities.each do |exp| %>
-                <% exp.each do |name, info| %>
-                  <div class="product card-grey product-flex">
-                    <div class="product-logo">
-                      <a href="https://www.lewagon.com/">
-                      <%= image_tag info["logo"], class: "logo-size-small" %>
-                      </a>
-                    </div>
-                    <div class="product-detail padded-light-left">
-                      <h4><%= info["title"] %></h4>
-                      <p><em><%= info["subtitle"] %></em></p>
-                      <ul>
-                      <% info["content"]["bullets"].each_value do |content|%>
-                        <li> <%= content %> </li>
-                      <% end %>
-                      </ul>
-
-                    </div>
-                    <div class="product-date">
-                      <p><%= info["date"] %></p>
-                    </div>
+            <% data.activities.each do |exp| %>
+              <% exp.each do |name, info| %>
+                <div class="product card-grey product-flex">
+                  <div class="product-logo">
+                    <a href="https://www.lewagon.com/">
+                    <%= image_tag info["logo"], class: "logo-size-small" %>
+                    </a>
                   </div>
-                <% end %>
-              <% end %>
+                  <div class="product-detail padded-light-left">
+                    <h4><%= info["title"] %></h4>
+                    <p><em><%= info["subtitle"] %></em></p>
+                    <ul>
+                    <% info["bullets"].each_value do |content|%>
+                      <li> <%= content %> </li>
+                    <% end %>
+                    </ul>
 
-            </div>
+                  </div>
+                  <div class="product-date">
+                    <p><%= info["date"] %></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+
           </div>
         </div>
       </div>
     </div>
   </div>
+
+</div>
