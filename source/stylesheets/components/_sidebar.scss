@@ -6,14 +6,26 @@ $hamburger-color-open: black;
 
 // Hamburger
 
+button {
+  background-color:transparent;
+}
 .hamburger {
-  background: transparent;
+
+position: fixed;
+    width: 50px;
+    font-size: 23px;
+    top: 9px;
+    z-index: 1060;
+    // -webkit-transition: 0.3s, ease;
+    // transition: 0.3s, ease;
+
+  // background: transparent;
   border: none;
   display: block;
   height: 27px;
-  position: fixed;
-  width: 32px;
-  z-index: 999;
+  // position: fixed;
+  // width: 32px;
+  // z-index: 999;
   &:hover {
     outline: none;
   }
@@ -172,15 +184,15 @@ $hamburger-color-open: black;
 }
 
 
-#menu-toggle {
-    position: fixed;
-    width: 50px;
-    font-size: 23px;
-    top: 9px;
-    z-index: 1060;
-    transition: 0.3s, ease;
+// #menu-toggle {
+//     position: fixed;
+//     width: 50px;
+//     font-size: 23px;
+//     top: 9px;
+//     z-index: 1060;
+//     transition: 0.3s, ease;
 
-}
+// }
 
 // #menu.lefted {
 //     left: 198px;
