@@ -1,14 +1,3 @@
-// $(document).ready(function() {
-//   $( "#menu" ).click(function() {
-//     $('#sidebar').toggle("slow", function() { // enleve le contenu et le remet hide and show
-//       console.log("callback");
-//       $("#page-content").toggleClass("toggled");
-//       $("#menu").toggleClass("lefted"); // supprime et remet une classe
-//       $("#menu").toggleClass("relefted");
-//       // $('#menu').css('left', '0')  // modifie de maniere permanente
-//     });
-//   });
-// });
 
 
 $(document).ready(function() {
@@ -20,6 +9,7 @@ $(document).ready(function() {
     $(".navbar-resume").show();
     $("#menu-toggle").hide();
     $(".sidebar-nav").hide();
+    $(".product-logo").hide();
   } else {
     console.log("bigger screen 1");
     $("#menu-toggle").show();
@@ -41,10 +31,11 @@ $(document).ready(function() {
       $(".navbar-resume").show();
       $("#menu-toggle").hide();
       $(".sidebar-nav").hide();
+      $(".product-logo").hide();
       $(".hamburger").removeClass("is-open");
       $(".hamburger").addClass("is-closed");
     } else {
-      console.log("bigger screen 2 ");
+      console.log("bigger screen 2");
       $("#menu-toggle").show();
       $(".navbar-resume").hide();
       $(".sidebar-nav").show();

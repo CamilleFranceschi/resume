@@ -8,21 +8,22 @@
       n1: 1
       n2: 3
       n3: 3
+    chart_number: 70
 - programming:
     title: Programming
     bullets:
-      b1: VBA
-      b2: HTML/CSS
-      b3: Javascript/jQuery
-      b4: Ruby/Ruby on Rails
+      b1: HTML/CSS
+      b2: Javascript/jQuery
+      b3: Ruby/Ruby on Rails
     numbers:
       n1: 1
       n2: 3
       n3: 3
-      n4: 5
+    chart_number: 60
 - design:
     title: Design
     bullets:
       b1: Sketch
     numbers:
       n1: 1
+    chart_number: 80

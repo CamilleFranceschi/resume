@@ -1,75 +1,76 @@
 <h2>Skills</h2>
 
+<% counterJs = 1 %>
+<% counter = 1 %>
+
 <div class="center-inside-row-start">
-  <% counter = 1 %>
   <% data.skills.each do |skill| %>
+    <% count = 1 %>
     <% skill.each do |name, info| %>
       <div class= "text-center">
         <canvas id= "<%= name %>" height="130" width="130"></canvas>
+        <% content_for(:after_js) do %>
+          <script>
+            var options = {
+              percentageInnerCutout: 80
+            };
+            var doughnutData = [
+                {
+                  value: <%= info["chart_number"].to_i %>,
+                  color: "#1AA59A"
+                },
+                {
+                  value : <%= (100 - info["chart_number"].to_i) %>,
+                  color : "#FBFBFB"
+                }
+              ];
+
+            var myDoughnut = new Chart(document.getElementById("<%= name %>").getContext("2d")).Doughnut(doughnutData, options);
+          </script>
+        <% end %>
+
         <h5><%= info["title"] %></h5>
 
         <% info["bullets"].each_value do |content| %>
-          <div>
-            <%= content %>
-          </div>
+          <div><%= content %></div>
         <% end %>
 
-        <div class = "btn-green btn-size-small margined-top skill-detail-<%= counter %>">
-          View more
-        </div>
-        <% counter += 1 %>
+        <div class = "btn-green btn-size-small margined-top" id="skill-detail-<%= counter %>">View more </div>
 
-        <% count = 1 %>
 
-        <div class="hidden skill-to-hide-<%= counter %>">
+        <div class = "hidden" id="skill-to-hide-<%= counter %>">
           <% info["numbers"].each_value do |number| %>
             <%= info["bullets"]["b#{count}"] %>
             <div>
-             <% number.times do %>
-              <i class = "fa fa-circle"></i>
+              <% number.times do %>
+                <i class = "fa fa-circle"></i>
               <% end %>
               <% (6 - number).times do %>
                 <i class="fa fa-circle-thin"></i>
               <% end %>
-              <% count += 1 %>
+              <%= count += 1 %>
             </div>
           <% end %>
         </div>
 
 
-      </div>
-
-      <% content_for(:after_js) do %>
-        <script>
-          $(function(){
-            $(".skill-detail-"+ <%= counter %>).on("click", function(e){
-              // Change active tab
-              console.log(".skill-detail-"+ <%= counter %>);
-              $(".skill-to-hide-"+ <%= counter %>).toggleClass('hidden');
+        <% content_for(:after_js) do %>
+          <script>
+            $(document).ready(function() {
+              $(function(){
+                console.log("#skill-detail-"+<%= counterJs %>);
+                console.log("#skill-to-hide-"+<%= counterJs %>);
+                $("#skill-detail-"+<%= counterJs %>).on("click", function(e){
+                  console.log("#skill-to-hide-"+<%= counterJs %>);
+                  $("#skill-to-hide-"+<%= counterJs %>).toggleClass("hidden");
+                });
+              });
             });
-          });
-        </script>
-
-        <script>
-          var options = {
-            percentageInnerCutout: 80
-          };
-          var doughnutData = [
-              {
-                value: 70,
-                color: "#1AA59A"
-              },
-              {
-                value : 30,
-                color : "#FBFBFB"
-              }
-            ];
-
-            var myDoughnut = new Chart(document.getElementById("<%= name %>").getContext("2d")).Doughnut(doughnutData, options);
-        </script>
-
-
-      <% end %>
+          </script>
+        <% counterJs += 1 %>
+        <% end %>
+        <% counter += 1 %>
+      </div>
 
     <% end %>
   <% end %>
