@@ -5,22 +5,44 @@
     </div>
   </div>
 
+  <div class="navbar-resume">
 
-  <div class="navbar-resume-item">
-    <div class="dropdown">
-      <!-- <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i> -->
-      <button type="button" class="hamburger is-closed animated fadeInLeft dropdown-toggle" data-toggle="dropdown">
-        <span class="hamb-top"></span>
-        <span class="hamb-middle"></span>
-        <span class="hamb-bottom"></span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-left navbar-resume-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
-      </ul>
+    <div class="navbar-resume-item">
+
+      <div class="dropdown">
+        <!-- <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i> -->
+        <button type="button" class="hamburger is-closed animated fadeInLeft dropdown-toggle" data-toggle="dropdown">
+          <span class="hamb-top"></span>
+          <span class="hamb-middle"></span>
+          <span class="hamb-bottom"></span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-left navbar-resume-dropdown-menu">
+          <div><a class="tab-column" data-target="#about">About</a></div>
+          <div><a class="tab-column" data-target="#experiences">Experiences</a></div>
+          <div><a class="tab-column" data-target="#education">Education</a></div>
+          <div><a class="tab-column" data-target="#skills">Skills</a></div>
+          <div><a class="tab-column" data-target="#side-projects">Side projects</a></div>
+          <div><a class="tab-column" data-target="#activities">Activities</a></div>
+        </div>
+      </div>
     </div>
 
+    <div class="navbar-resume-right">
+      <a href="mailto:franceschi.camille@gmail.com">
+        <h4><i class="fa fa-envelope fa" aria-hidden="true"></i></h4>
+      </a>
+
+      <a href="https://github.com/CamilleFranceschi">
+        <h4><i class="fa fa-github fa" aria-hidden="true"></i></h4>
+      </a>
+
+      <a href="https://www.linkedin.com/in/camille-franceschi-64499940">
+        <h4><i class="fa fa-linkedin fa" aria-hidden="true"></i></h4>
+      </a>
+    <%= image_tag "avatar-camille.png", class: "avatar avatar-small avatar-border-white" %>
+    </div>
+
+    <!-- Logo -->
        <!-- Notification link-->
 <!--     <a href="" class="navbar-resume-item navbar-resume-link hidden-md hidden-lg">
       <div class="badge-container">

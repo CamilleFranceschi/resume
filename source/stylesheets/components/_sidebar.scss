@@ -1,31 +1,24 @@
 // Variables
 
-$width2: 100px;
-$hamburger-color-closed: black;
-$hamburger-color-open: black;
+$width: 100px;
 
 // Hamburger
 
 button {
   background-color:transparent;
+  padding: 0px;
 }
 .hamburger {
-
-position: fixed;
-    width: 50px;
-    font-size: 23px;
-    top: 9px;
-    z-index: 1060;
-    // -webkit-transition: 0.3s, ease;
-    // transition: 0.3s, ease;
-
-  // background: transparent;
+  position: fixed;
+  width: 50px;
+  font-size: 23px;
+  top: 17px;
+  left: 16px;
+  z-index: 1060;
   border: none;
   display: block;
   height: 27px;
-  // position: fixed;
-  // width: 32px;
-  // z-index: 999;
+
   &:hover {
     outline: none;
   }
@@ -47,7 +40,7 @@ position: fixed;
     line-height: 32px;
     opacity: 0;
     text-align: center;
-    width: $width2;
+    width: $width;
   }
   &:hover {
     before {
@@ -67,17 +60,17 @@ position: fixed;
   }
   .hamb-top {
     -webkit-transition: all .35s ease-in-out;
-    background-color: $hamburger-color-closed;
+    background-color: $gray-light;
     top: 5px;
   }
   .hamb-middle {
-    background-color: $hamburger-color-closed;
+    background-color: $gray-light;
     margin-top: -2px;
     top: 50%;
   }
   .hamb-bottom {
     -webkit-transition: all .35s ease-in-out;
-    background-color: $hamburger-color-closed;
+    background-color: $gray-light;
     bottom: 5px;
   }
 }
@@ -91,19 +84,19 @@ position: fixed;
   .hamb-top {
     -webkit-transform: rotate(45deg);
     -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
-    background-color: $hamburger-color-open;
+    background-color: $gray-light;
     margin-top: -2px;
     top: 50%;
   }
   .hamb-middle {
-    background-color: $hamburger-color-open;
+    background-color: $gray-light;
     display: none;
   }
   .hamb-bottom {
     -webkit-transform: rotate(-45deg);
     -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
     // background-color: #1a1a1a;
-    background-color: $hamburger-color-open;
+    background-color: $gray-light;
     margin-top: -2px;
     top: 50%;
   }
@@ -117,7 +110,7 @@ position: fixed;
     line-height: 32px;
     opacity: 0;
     text-align: center;
-    width: $width2;
+    width: $width;
   }
   &:hover {
     before {
@@ -163,7 +156,7 @@ position: fixed;
 // Page content wrapper
 
   #page-content-wrapper {
-      padding: 20px;
+      padding: 20px 0px;
       position: relative;
   }
 

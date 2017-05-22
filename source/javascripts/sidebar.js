@@ -17,13 +17,13 @@ $(document).ready(function() {
   if (viewportWidth < 768) {
     console.log("small screen 1");
     $("#wrapper").removeClass("toggled");
-    $(".navbar-resume-item").show();
+    $(".navbar-resume").show();
     $("#menu-toggle").hide();
     $(".sidebar-nav").hide();
   } else {
     console.log("bigger screen 1");
     $("#menu-toggle").show();
-    $(".navbar-resume-item").hide();
+    $(".navbar-resume").hide();
     $(".sidebar-nav").show();
     $("#wrapper").addClass("toggled");
     $( "#menu-toggle" ).on("click", function(e) {
@@ -33,21 +33,23 @@ $(document).ready(function() {
     });
   };
 
-
-
   $(window).resize(function () {
     var viewportWidth = $(window).width();
     if (viewportWidth < 768) {
       console.log("small screen 2");
       $("#wrapper").removeClass("toggled");
-      $(".navbar-resume-item").show();
+      $(".navbar-resume").show();
       $("#menu-toggle").hide();
       $(".sidebar-nav").hide();
+      $(".hamburger").removeClass("is-open");
+      $(".hamburger").addClass("is-closed");
     } else {
       console.log("bigger screen 2 ");
       $("#menu-toggle").show();
-      $(".navbar-resume-item").hide();
+      $(".navbar-resume").hide();
       $(".sidebar-nav").show();
+      $(".hamburger").removeClass("is-open");
+      $(".hamburger").addClass("is-closed");
       $("#wrapper").addClass("toggled");
       $( "#menu-toggle" ).on("click", function(e) {
         console.log("click general2");

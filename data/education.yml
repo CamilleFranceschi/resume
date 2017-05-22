@@ -4,7 +4,7 @@
     subtitle: 9 week bootcamp, n. 1 bootcamp on webiste X
     diplomas:
       d1: Full stack knowledge - rails
-    date: France, 02/17 - 04/17
+    date: Paris, 02/17 - 04/17
 
 
 - hec_lausanne:
@@ -13,7 +13,7 @@
     subtitle: Best school in Switzerland
     diplomas:
       d1: Master of Science in Corporate Finance
-    date: Switzerland, 02/13 - 07/13
+    date: Lausanne, 02/13 - 07/13
 
 - dauphine:
     logo: dauphine.png
@@ -22,4 +22,4 @@
     diplomas:
       d1: Master of Science in Quantitative Finance (104)
       d2: Licence of Mathematics and Computer Science
-    date: France, 09/08 - 01/13
+    date: Paris, 09/08 - 01/13

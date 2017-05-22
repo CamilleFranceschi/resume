@@ -1,6 +1,7 @@
 a {
   text-decoration: none;
 }
+
 .fa:hover {
   transform: scale(1.2);
 }
@@ -9,32 +10,28 @@ a {
   background-color: white;
 }
 
+#about {
+  h1 {
+    padding: 0px 0 40px 0;
+    font-size: 45px;
+    font-weight: bold;
+    color:$green;
+  }
 
-
-
-#about h1 {
-  padding: 0px 0 40px 0;
-  font-size: 45px;
-  font-weight: bold;
-  color:$green;
+  p {
+    font-size: 18px;
+  }
 }
-#about  p {
- font-size: 18px;
-}
 
-#page-content h2 {
-  color:$green;
-}
-#page-content h2 {
+.tab-content h2 {
+  color: $green;
   padding: 40px 0px 30px 0;
   font-size: 35px;
   font-weight: bold;
-
 }
-
 
 .logo-size-small {
 // height: 90px;
-width:85px;
+  width:85px;
 
 }
