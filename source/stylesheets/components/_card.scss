@@ -4,44 +4,7 @@
   position:relative;
 }
 
-
 .card-grey {
   background-color: $gray-extra-light;
-  // justify-content: space-between;
 }
-
-.card-white {
-  height: 120px;
-  width: 260px;
-  padding: 20px;
-  position: relative;
-  background-color: white;
-}
-
-
-.card-category {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-
-}
-.card-description {
-  position: absolute;
-}
-.card-user {
-  position: absolute;
-}
-
-.card-link {
-  position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  // width: 100%;
-  // z-index:0;
-  // background: black;
-  // opacity: 0;
-}
-
 

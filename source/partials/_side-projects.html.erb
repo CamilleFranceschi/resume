@@ -1,25 +1,21 @@
 <h2>Side Projects</h2>
 
 <div class="container-fluid">
-
-  <div class="card center-inside-row-end">
+  <div class="card flex-center-row-end">
     <% data.side_projects.each do |exp| %>
       <% exp.each do |name, info| %>
-        <div class="center-inside-column">
-          <!-- <div class="card center-inside-column margined-bottom margin-l-r-auto"> -->
-            <%#= image_tag info["logo"], class: "logo-size-medium margined-bottom" %>
-            <%= image_tag info["screen"], class: "logo-size-large margined-bottom" %>
-            <h4><%= info["title"] %></h4>
-            <%= image_tag info["stack"], class: "logo-size-small-height" %>
-            <a href="" class="card-link"></a>
+        <div class="flex-center-column text-center">
+            <% link_to info["url"], target: :_blank do %>
+              <%= image_tag info["screen"], class: "logo-size-large margined-bottom" %>
+              <h4><%= info["title"] %></h4>
+              <%= image_tag info["stack"], class: "logo-size-small-height" %>
+            <% end %>
           </div>
-
       <% end %>
     <% end %>
   </div>
-
-  <h3>BookShare Demo</h3>
+  <h3 class= text-center>BookShare Demo</h3>
   <div class="videowrapper">
     <iframe src="https://www.youtube.com/embed/tZKlC27WjtM" frameborder="0" allowfullscreen></iframe>
   </div>
-
+</div>

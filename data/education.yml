@@ -5,14 +5,16 @@
     diplomas:
       d1: Full stack knowledge - rails
     date: Paris, 02/17 - 04/17
+    url: https://www.lewagon.com
 
 - hec_lausanne:
-    logo: hec_Lausanne.png
+    logo: hec-lausanne.png
     title: HEC Lausanne
     subtitle: Best school in Switzerland
     diplomas:
       d1: Master of Science in Corporate Finance
     date: Lausanne, 02/13 - 07/13
+    url: https://www.unil.ch/hec/en/home.html
 
 - dauphine:
     logo: dauphine.png
@@ -22,3 +24,4 @@
       d1: Master of Science in Quantitative Finance (104)
       d2: Licence of Mathematics and Computer Science
     date: Paris, 09/08 - 01/13
+    url: http://www.dauphine.fr/en/welcome.html

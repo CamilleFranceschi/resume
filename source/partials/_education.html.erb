@@ -3,22 +3,24 @@
 <% data.education.each do |exp| %>
   <% exp.each do |name, info| %>
     <div class="product card-grey product-flex">
-      <div class="product-logo test">
-        <a href="https://www.lewagon.com/">
+      <div class="product-logo">
+        <% link_to info["url"], target: :_blank do %>
         <%= image_tag info["logo"], class: "logo-size-small" %>
-        </a>
+        <% end %>
       </div>
+
       <div class="product-detail padded-light-left">
         <h4><%= info["title"] %></h4>
         <p><em><%= info["subtitle"] %></em></p>
         <ul>
-        <% info["diplomas"].each_value do |content|%>
-          <li> <%= content %> </li>
-        <% end %>
+          <% info["diplomas"].each_value do |content|%>
+            <li> <%= content %> </li>
+          <% end %>
         </ul>
       </div>
+
       <div class="product-date">
-      <p><%= info["date"] %></p>
+        <p><%= info["date"] %></p>
       </div>
     </div>
   <% end %>

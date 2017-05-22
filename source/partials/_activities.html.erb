@@ -4,20 +4,21 @@
   <% exp.each do |name, info| %>
     <div class="product card-grey product-flex">
       <div class="product-logo">
-        <a href="https://www.lewagon.com/">
-        <%= image_tag info["logo"], class: "logo-size-small" %>
-        </a>
+        <% link_to info["url"], target: :_blank do %>
+          <%= image_tag info["logo"], class: "logo-size-small" %>
+        <% end %>
       </div>
+
       <div class="product-detail padded-light-left">
         <h4><%= info["title"] %></h4>
         <p><em><%= info["subtitle"] %></em></p>
         <ul>
-        <% info["bullets"].each_value do |content|%>
-          <li> <%= content %> </li>
-        <% end %>
+          <% info["bullets"].each_value do |content|%>
+            <li> <%= content %> </li>
+          <% end %>
         </ul>
-
       </div>
+
       <div class="product-date">
         <p><%= info["date"] %></p>
       </div>

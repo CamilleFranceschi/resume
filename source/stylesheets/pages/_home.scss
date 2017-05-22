@@ -1,15 +1,44 @@
-a {
-  text-decoration: none;
-}
+// General CSS of index page
 
 .fa:hover {
   transform: scale(1.2);
 }
 
-.wrapper-white {
-  background-color: white;
+.tab-content h2 {
+  color: $green;
+  padding: 40px 0px 30px 0;
+  font-size: 35px;
+  font-weight: bold;
 }
 
+// Page content wrapper
+  #page-content-wrapper {
+      padding: 20px 0px;
+      position: relative;
+  }
+
+  #wrapper.toggled #page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+  }
+
+// Logos
+.logo-size-small {
+  width:85px;
+}
+
+.logo-size-small-height {
+  height: 30px;
+}
+.logo-size-medium {
+  width:150px;
+}
+
+.logo-size-large {
+  width: 300px;
+}
+
+// About section
 #about {
   h1 {
     padding: 0px 0 40px 0;
@@ -23,54 +52,37 @@ a {
   }
 }
 
-.tab-content h2 {
-  color: $green;
-  padding: 40px 0px 30px 0;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.logo-size-small {
-// height: 90px;
-  width:85px;
-}
-
-.logo-size-small-height {
-height: 30px;
-
-}
-.logo-size-medium {
-// height: 90px;
-  width:150px;
-
-}
-
-.logo-size-large {
-// height: 90px;
-  width: 300px;
-
-}
-
+// Skills section
 #skills .margined {
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-#video-center {
-  margin: auto;
+// Side projects section
+#side-projects {
+  h3 {
+    color: $green;
+    font-weight: bold;
+  }
+
+  h4 {
+    color: $gray-dark;
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    margin-bottom: 20px;
+  }
+
+  img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+  }
 }
-
-#side-projects h3 {
-  color: $green;
-  font-weight: bold;
-}
-
-#side-projects h4 {
-  color: $gray-dark;
-  font-weight: bold;
-}
-
-
 
 .videowrapper {
     float: none;

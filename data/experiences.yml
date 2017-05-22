@@ -1,6 +1,6 @@
 - le_wagon:
     logo: lewagon.png
-    title: Le Wagon, former start-up
+    title: Le Wagon, bootcamp
     content:
       subtitle: 9 intensive weeks bootcamp to learn all the web stack. From the database to the browser.
       bullets:
@@ -10,8 +10,9 @@
         b4: Front CSS, HTML, Bootstrap, Flexbox
         b5: Rails
     date: Paris & London, 04/17 - present
+    url: https://www.lewagon.com
 - jobora:
-    logo: logo-jobora.png
+    logo: jobora.png
     title: JOBORA, start-up
     content:
       subtitle: Career marketplace for retail and services industries
@@ -21,8 +22,9 @@
         b3: Work on fundraising
         b4: Build the business plan & roadmap
     date: Paris, 07/16 - 12/17
+    url: https://www.jobora.fr/
 - cfl:
-    logo: logo-cfl.png
+    logo: cfl.png
     title: CFL, M&A Boutique
     content:
       subtitle: M&A boutique specialized in transport, energy and environment
@@ -33,3 +35,4 @@
         b4: Participation to entire negociations(shareholders agreement & Investment agreement)
         b5: Worked on deals from 9m€ to €16.7bn EnV (RTE, Nice Airport,Géothermie Bouillante, Vergnet Hydro)
     date: Paris, 09/13 - 07/16
+    url: http://www.financieredulion.com/

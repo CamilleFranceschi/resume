@@ -1,4 +1,3 @@
-
 .product {
   border-radius: $border-radius-base;
   padding: 20px;
@@ -9,13 +8,6 @@
 .product-flex {
   display: flex;
   align-items:center;
-}
-.product-grey {
-  background-color: $gray-extra-light;
-}
-
-.product-detail {
-
 }
 
 .product-date {
@@ -28,8 +20,8 @@
   color: white;
   padding: 10px;
   margin:none;
-}
 
-.product-date p {
+  p {
   margin:0;
+  }
 }

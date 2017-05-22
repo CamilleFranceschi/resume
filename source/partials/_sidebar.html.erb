@@ -1,47 +1,54 @@
-<div class="center-inside-column" id="sidebar-head">
-  <%= image_tag "avatar-camille.png", class: "avatar avatar-medium avatar-border-white-lg margined-top" %>
-  <h4><b>Camille Franceschi</b>
-  <br><br>
-  <ul class="list-inline text-center">
-    <li>
-      <a href="mailto:franceschi.camille@gmail.com">
-        <i class="fa fa-envelope fa" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/CamilleFranceschi">
-        <i class="fa fa-github fa" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/camille-franceschi-64499940">
-        <i class="fa fa-linkedin fa" aria-hidden="true"></i>
-      </a>
-    </li>
-  </ul>
-  </h4>
-</div>
-<div id="sidebar-body">
-  <div class="tabs-column padded-light" >
+<button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas" id="menu-toggle">
+  <span class="hamb-top"></span>
+  <span class="hamb-middle"></span>
+  <span class="hamb-bottom"></span>
+</button>
 
-    <a class="tab-column padded-light-left active" data-target="#about">
-      <h5>About</h5>
-    </a>
-    <a class="tab-column padded-light-left" data-target="#experiences">
-      <h5>Experiences</h5>
-    </a>
-    <a class="tab-column padded-light-left" data-target="#education">
-      <h5>Education</h5>
-    </a>
-    <a class="tab-column padded-light-left" data-target="#skills">
-      <h5>Skills</h5>
-    </a>
-    <a class="tab-column padded-light-left" data-target="#side-projects">
-      <h5>Side projects</h5>
-    </a>
-    <a class="tab-column padded-light-left" data-target="#activities">
-      <h5>Activities</h5>
-    </a>
+<div class="sidebar-resume">
+  <div class="flex-center-column" id="sidebar-head">
+    <%= image_tag "avatar-camille.png", class: "avatar avatar-medium avatar-border-white-lg margined-top" %>
+    <h4><b>Camille Franceschi</b>
+    <br><br>
+    <ul class="list-inline text-center">
+      <li>
+        <% link_to "mailto:franceschi.camille@gmail.com", target: :_blank do %>
+          <i class="fa fa-envelope fa" aria-hidden="true"></i>
+        <% end %>
+      </li>
+      <li>
+        <% link_to "https://github.com/CamilleFranceschi", target: :_blank do %>
+          <i class="fa fa-github fa" aria-hidden="true"></i>
+        <% end %>
+      </li>
+      <li>
+        <% link_to "https://www.linkedin.com/in/camille-franceschi", target: :_blank do %>
+          <i class="fa fa-linkedin fa" aria-hidden="true"></i>
+        <% end %>
+      </li>
+    </ul>
+    </h4>
+  </div>
+  <div id="sidebar-body">
+    <div class="tabs-column padded-light">
+      <a class="tab-column padded-light-left active" data-target="#about">
+        <h5>About</h5>
+      </a>
+      <a class="tab-column padded-light-left" data-target="#experiences">
+        <h5>Experiences</h5>
+      </a>
+      <a class="tab-column padded-light-left" data-target="#education">
+        <h5>Education</h5>
+      </a>
+      <a class="tab-column padded-light-left" data-target="#skills">
+        <h5>Skills</h5>
+      </a>
+      <a class="tab-column padded-light-left" data-target="#side-projects">
+        <h5>Side projects</h5>
+      </a>
+      <a class="tab-column padded-light-left" data-target="#activities">
+        <h5>Activities</h5>
+      </a>
+    </div>
   </div>
 </div>
 
@@ -56,7 +63,6 @@
     });
 
     function hamburger_cross() {
-
       if (isClosed == true) {
         overlay.hide();
         trigger.removeClass('is-open');
@@ -71,3 +77,4 @@
     }
   </script>
 <% end %>
+

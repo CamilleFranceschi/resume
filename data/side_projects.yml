@@ -1,19 +1,18 @@
 - bookshare:
-    logo: logo_bookshare_blue.png
     title: BookShare
     subtitle: Tinder for books
     stack: bookshare-stack.png
     screen: bookshare.png
-
+    url: https://www.bookshare.fr/
 - easycat:
-    logo: logo_easycat.png
     title: Easycat
     subtitle: Cat sitting marketplace
     stack: bookshare-stack.png
     screen: easycat.png
+    url: https://easycat.herokuapp.com/
 - foodelice:
-    logo: Foodelice-logo-grey.png
     title: Foodelice
     subtitle: Restaurant Landing
     stack: foodelice-stack.png
     screen: foodelice.png
+    url: https://camillefranceschi.github.io/foodelice/

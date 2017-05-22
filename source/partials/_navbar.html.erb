@@ -1,0 +1,24 @@
+<div class="dropdown">
+  <h3 class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars" ></i></h3>
+  <div class="dropdown-menu dropdown-menu-left navbar-resume-dropdown-menu">
+    <div><a class="tab-column" data-target="#about">About</a></div>
+    <div><a class="tab-column" data-target="#experiences">Experiences</a></div>
+    <div><a class="tab-column" data-target="#education">Education</a></div>
+    <div><a class="tab-column" data-target="#skills">Skills</a></div>
+    <div><a class="tab-column" data-target="#side-projects">Side projects</a></div>
+    <div><a class="tab-column" data-target="#activities">Activities</a></div>
+  </div>
+</div>
+
+<div class="navbar-resume-right">
+  <% link_to "mailto:franceschi.camille@gmail.com", target: :_blank do %>
+    <h4><i class="fa fa-envelope fa" aria-hidden="true"></i></h4>
+  <% end %>
+  <% link_to "https://github.com/CamilleFranceschi", target: :_blank do %>
+    <h4><i class="fa fa-github fa" aria-hidden="true"></i></h4>
+  <% end %>
+  <% link_to "https://www.linkedin.com/in/camille-franceschi", target: :_blank do %>
+    <h4><i class="fa fa-linkedin fa" aria-hidden="true"></i></h4>
+  <% end %>
+  <%= image_tag "avatar-camille.png", class: "avatar avatar-small avatar-border-white-md" %>
+</div>
