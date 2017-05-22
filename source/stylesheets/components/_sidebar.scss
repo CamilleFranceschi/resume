@@ -12,7 +12,6 @@ $hamburger-color-open: black;
   display: block;
   height: 27px;
   position: fixed;
-  top: 20px;
   width: 32px;
   z-index: 999;
   &:hover {
@@ -72,9 +71,9 @@ $hamburger-color-open: black;
 }
 .hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom, .hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom  {
   height: 3px;
-  left: 0;
+  left: 13px;
   position: absolute;
-  width: 72%;
+  width: 26px;
 }
 .hamburger.is-open {
   .hamb-top {
@@ -175,9 +174,9 @@ $hamburger-color-open: black;
 
 #menu-toggle {
     position: fixed;
-    top: 11px;
+    width: 50px;
     font-size: 23px;
-    color: #E6E6E6;
+    top: 9px;
     z-index: 1060;
     transition: 0.3s, ease;
 
