@@ -54,19 +54,22 @@
 }
 
 
-.center-inside-row{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-}
-
 .center-inside-row-start{
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
+.center-inside-row-end{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+
 
 
 .center-inside-full-page {

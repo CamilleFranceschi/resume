@@ -1,0 +1,19 @@
+- bookshare:
+    logo: logo_bookshare_blue.png
+    title: BookShare
+    subtitle: Tinder for books
+    stack: bookshare-stack.png
+    screen: bookshare.png
+
+- easycat:
+    logo: logo_easycat.png
+    title: Easycat
+    subtitle: Cat sitting marketplace
+    stack: bookshare-stack.png
+    screen: easycat.png
+- foodelice:
+    logo: Foodelice-logo-grey.png
+    title: Foodelice
+    subtitle: Restaurant Landing
+    stack: foodelice-stack.png
+    screen: foodelice.png

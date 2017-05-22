@@ -176,25 +176,6 @@ button {
     list-style: none;
 }
 
-
-// #menu-toggle {
-//     position: fixed;
-//     width: 50px;
-//     font-size: 23px;
-//     top: 9px;
-//     z-index: 1060;
-//     transition: 0.3s, ease;
-
-// }
-
-// #menu.lefted {
-//     left: 198px;
-// }
-
-// #menu.relefted {
-//     left: 20px;
-// }
-
 .tabs-column {
   display: flex;
   flex-direction: column;
@@ -205,13 +186,12 @@ button {
   text-decoration: none;
 }
 
-
 .tab-column:hover {
     background: rgba(26, 165, 154,0.2);
     cursor: pointer;
     text-decoration: none;
-    // opacity: 0.8;
 }
+
 .tab-column.active {
     background: rgba(26, 165, 154,0.2);
     border-left: 6px solid $green;

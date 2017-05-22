@@ -35,7 +35,7 @@
           <div><%= content %></div>
         <% end %>
 
-        <div class = "btn-green btn-size-small margined-top" id="skill-detail-<%= counter %>">View more </div>
+        <div class = "btn-green btn-size-small margined" id="skill-detail-<%= counter %>">View more </div>
 
 
         <div class = "hidden" id="skill-to-hide-<%= counter %>">
@@ -48,7 +48,7 @@
               <% (6 - number).times do %>
                 <i class="fa fa-circle-thin"></i>
               <% end %>
-              <%= count += 1 %>
+              <% count += 1 %>
             </div>
           <% end %>
         </div>
@@ -58,10 +58,7 @@
           <script>
             $(document).ready(function() {
               $(function(){
-                console.log("#skill-detail-"+<%= counterJs %>);
-                console.log("#skill-to-hide-"+<%= counterJs %>);
                 $("#skill-detail-"+<%= counterJs %>).on("click", function(e){
-                  console.log("#skill-to-hide-"+<%= counterJs %>);
                   $("#skill-to-hide-"+<%= counterJs %>).toggleClass("hidden");
                 });
               });

@@ -4,6 +4,8 @@
       b1: Market & business analysis
       b2: Financial analysis
       b3: Financial modelisation
+      b4: "-"
+      b5: "-"
     numbers:
       n1: 1
       n2: 3
@@ -14,16 +16,26 @@
     bullets:
       b1: HTML/CSS
       b2: Javascript/jQuery
-      b3: Ruby/Ruby on Rails
+      b3: Middleman
+      b3: Ruby
+      b4: Ruby on Rails
+      b5: Sinatra
     numbers:
       n1: 1
       n2: 3
       n3: 3
+      n4: 3
+      n5: 3
     chart_number: 60
 - design:
     title: Design
     bullets:
       b1: Sketch
+      b2: Marvel
+      b3: "-"
+      b4: "-"
+      b5: "-"
     numbers:
       n1: 1
+      n2: 3
     chart_number: 80

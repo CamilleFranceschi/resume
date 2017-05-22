@@ -33,5 +33,58 @@ a {
 .logo-size-small {
 // height: 90px;
   width:85px;
+}
 
+.logo-size-small-height {
+height: 30px;
+
+}
+.logo-size-medium {
+// height: 90px;
+  width:150px;
+
+}
+
+.logo-size-large {
+// height: 90px;
+  width: 300px;
+
+}
+
+#skills .margined {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#video-center {
+  margin: auto;
+}
+
+#side-projects h3 {
+  color: $green;
+  font-weight: bold;
+}
+
+#side-projects h4 {
+  color: $gray-dark;
+  font-weight: bold;
+}
+
+
+
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
