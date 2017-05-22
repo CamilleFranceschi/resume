@@ -1,0 +1,31 @@
+<h2>Experiences</h2>
+
+<% data.experiences.each do |exp| %>
+  <% exp.each do |name, info| %>
+    <div class="product card-grey product-flex">
+      <div class="product-logo">
+        <a href="https://www.lewagon.com/">
+        <%= image_tag info["logo"], class: "logo-size-small" %>
+        </a>
+      </div>
+      <div class="product-detail padded-light-left">
+        <h4><%= info["title"] %></h4>
+        <p><em><%= info["content"]["subtitle"] %></em></p>
+        <ul>
+        <% info["content"]["bullets"].each_value do |content|%>
+          <li> <%= content %> </li>
+        <% end %>
+        </ul>
+
+        <p><b>Key learning points: </b>
+          <% info["learning_points"].each_value do |content|%>
+            <span class="label label-success"> <%= content %> </span>
+          <% end %>
+        </p>
+      </div>
+      <div class="product-date">
+        <p><%= info["date"] %></p>
+      </div>
+    </div>
+  <% end %>
+<% end %>

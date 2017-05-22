@@ -10,17 +10,9 @@
 //   });
 // });
 
-// $(document).ready(function() {
-
-//   $( "#menu" ).on("click", function(e) {
-//     console.log("callback");
-//     // $('#sidebar').slideLeft();
-//   });
-// });
 
 $(document).ready(function() {
-
-    $("#menu-toggle").click(function(e) {
+    $( "#menu-toggle" ).on("click", function(e) {
         e.preventDefault();
         console.log("test");
         $("#wrapper").toggleClass("toggled");

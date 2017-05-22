@@ -1,15 +1,124 @@
+// Variables
 
-#wrapper {
-    padding-left: 0px;
+$width2: 100px;
+$hamburger-color-closed: black;
+$hamburger-color-open: black;
+
+// Hamburger
+
+.hamburger {
+  background: transparent;
+  border: none;
+  display: block;
+  height: 27px;
+  position: fixed;
+  top: 20px;
+  width: 32px;
+  z-index: 999;
+  &:hover {
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
 }
-#wrapper.toggled {
-    padding-left: 250px;
+.hamburger.is-closed {
+  &:before {
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition: all .35s ease-in-out;
+    color: #ffffff;
+    content: '';
+    display: block;
+    font-size: 14px;
+    line-height: 32px;
+    opacity: 0;
+    text-align: center;
+    width: $width2;
+  }
+  &:hover {
+    before {
+      -webkit-transform: translate3d(-100px,0,0);
+      -webkit-transition: all .35s ease-in-out;
+      display: block;
+      opacity: 1;
+    }
+    .hamb-top {
+      -webkit-transition: all .35s ease-in-out;
+      top: 0;
+    }
+    .hamb-bottom {
+      -webkit-transition: all .35s ease-in-out;
+      bottom: 0;
+    }
+  }
+  .hamb-top {
+    -webkit-transition: all .35s ease-in-out;
+    background-color: $hamburger-color-closed;
+    top: 5px;
+  }
+  .hamb-middle {
+    background-color: $hamburger-color-closed;
+    margin-top: -2px;
+    top: 50%;
+  }
+  .hamb-bottom {
+    -webkit-transition: all .35s ease-in-out;
+    background-color: $hamburger-color-closed;
+    bottom: 5px;
+  }
+}
+.hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom, .hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom  {
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 72%;
+}
+.hamburger.is-open {
+  .hamb-top {
+    -webkit-transform: rotate(45deg);
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+    background-color: $hamburger-color-open;
+    margin-top: -2px;
+    top: 50%;
+  }
+  .hamb-middle {
+    background-color: $hamburger-color-open;
+    display: none;
+  }
+  .hamb-bottom {
+    -webkit-transform: rotate(-45deg);
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+    // background-color: #1a1a1a;
+    background-color: $hamburger-color-open;
+    margin-top: -2px;
+    top: 50%;
+  }
+  &:before {
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition: all .35s ease-in-out;
+    color: #ffffff;
+    content: '';
+    display: block;
+    font-size: 14px;
+    line-height: 32px;
+    opacity: 0;
+    text-align: center;
+    width: $width2;
+  }
+  &:hover {
+    before {
+      -webkit-transform: translate3d(-100px,0,0);
+      -webkit-transition: all .35s ease-in-out;
+      display: block;
+      opacity: 1;
+    }
+  }
 }
 
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-}
+// Sidebar
 
 #sidebar-wrapper {
   z-index: 1000;
@@ -21,22 +130,38 @@
   overflow-y: auto;
   transition: all 0.5s ease;
   background-color: $gray-extra-light;
+
 }
+
+// General wrapper
+
+#wrapper {
+    padding-left: 0px;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
 
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
 }
 
-#page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
-}
 
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
+// Page content wrapper
+
+  #page-content-wrapper {
+      padding: 20px;
+      position: relative;
+  }
+
+  #wrapper.toggled #page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+  }
+
+// Sidebar
 
 .sidebar-nav {
     position: absolute;
@@ -47,33 +172,6 @@
     list-style: none;
 }
 
-@media(min-width:768px) {
-    #wrapper {
-        padding-left: 0;
-    }
-
-    #wrapper.toggled {
-        padding-left: 250px;
-    }
-
-    #sidebar-wrapper {
-        width: 0;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 250px;
-    }
-
-    #page-content-wrapper {
-        padding: 20px;
-        position: relative;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
-}
 
 #menu-toggle {
     position: fixed;
@@ -119,10 +217,6 @@
 
 #sidebar-head {
   color: $gray-dark;
-}
-
-
-#sidebar-body {
 }
 
 

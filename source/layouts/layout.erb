@@ -24,10 +24,9 @@
 
   <body class="<%= page_classes %>">
 
-    <%#= partial "navbar" %>
     <%= yield %>
     <%= javascript_include_tag "all" %>
-    <%= yield(:after_js) %>
+    <%= yield_content(:after_js) %>
 
   </body>
 </html>

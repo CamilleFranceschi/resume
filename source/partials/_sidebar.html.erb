@@ -1,0 +1,81 @@
+<div class="center-inside-column" id="sidebar-head">
+  <%= image_tag "avatar-camille.png", class: "avatar avatar-medium avatar-border-white margined-top" %>
+  <h4><b>Camille Franceschi</b>
+  <br><br>
+  <ul class="list-inline text-center">
+    <li>
+      <a href="mailto:franceschi.camille@gmail.com">
+        <i class="fa fa-envelope fa" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/CamilleFranceschi">
+        <i class="fa fa-github fa" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/camille-franceschi-64499940">
+        <i class="fa fa-linkedin fa" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+  </h4>
+</div>
+<div id="sidebar-body">
+  <div class="tabs-column padded-light" >
+
+    <a class="tab-column padded-light-left active" data-target="#about">
+      <h5>About</h5>
+    </a>
+    <a class="tab-column padded-light-left" data-target="#experiences">
+      <h5>Experiences</h5>
+    </a>
+    <a class="tab-column padded-light-left" data-target="#education">
+      <h5>Education</h5>
+    </a>
+    <a class="tab-column padded-light-left" data-target="#skills">
+      <h5>Skills</h5>
+    </a>
+    <a class="tab-column padded-light-left" data-target="#side-projects">
+      <h5>Side projects</h5>
+    </a>
+    <a class="tab-column padded-light-left" data-target="#activities">
+      <h5>Activities</h5>
+    </a>
+  </div>
+</div>
+
+<% content_for(:after_js) do %>
+  <script>
+    var trigger = $('.hamburger'),
+        overlay = $('.overlay'),
+       isClosed = false;
+
+    trigger.click(function () {
+      hamburger_cross();
+    });
+
+    function hamburger_cross() {
+
+      if (isClosed == true) {
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+    }
+
+    $(window).resize(function () {
+      var viewportWidth = $(window).width();
+      if (viewportWidth < 768) {
+        console.log("test")
+        $("#wrapper").removeClass("toggled");
+      }
+    });
+  </script>
+<% end %>
