@@ -34,3 +34,10 @@
       </div>
     </div>
  -->
+<% content_for(:after_js) do %>
+  <script>
+    $('[data-toggle=dropdown]').each(function() {
+     this.addEventListener('click', function() {}, false);
+
+  </script>
+<% end %>
