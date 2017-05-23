@@ -6,26 +6,28 @@
       b3: Financial modelisation
       b4: "-"
       b5: "-"
+      b6: "-"
     numbers:
-      n1: 1
-      n2: 3
-      n3: 3
-    chart_number: 70
+      n1: 5
+      n2: 5
+      n3: 5
+    chart_number: 85
 - programming:
     title: Programming
     bullets:
       b1: HTML/CSS
       b2: Javascript/jQuery
       b3: Middleman
-      b3: Ruby
-      b4: Ruby on Rails
-      b5: Sinatra
+      b4: Ruby
+      b5: Ruby on Rails
+      b6: Sinatra
     numbers:
-      n1: 1
+      n1: 4
       n2: 3
-      n3: 3
-      n4: 3
+      n3: 4
+      n4: 4
       n5: 3
+      n6: 3
     chart_number: 60
 - design:
     title: Design
@@ -35,7 +37,8 @@
       b3: "-"
       b4: "-"
       b5: "-"
+      b6: "-"
     numbers:
-      n1: 1
-      n2: 3
-    chart_number: 80
+      n1: 5
+      n2: 5
+    chart_number: 85

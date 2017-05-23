@@ -8,6 +8,7 @@
             <% link_to info["url"], target: :_blank do %>
               <%= image_tag info["screen"], class: "logo-size-large", id: "margined-screen" %>
               <h4><%= info["title"] %></h4>
+              <p><%= info["subtitle"] %></p>
               <%= image_tag info["stack"], class: "logo-size-small-height", id: "margined-stack" %>
             <% end %>
           </div>

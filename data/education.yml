@@ -1,16 +1,19 @@
 - le_wagon:
     logo: lewagon.png
     title: Le Wagon
-    subtitle: 9 week bootcamp, n. 1 bootcamp on webiste X
+    subtitle: 9 intensive weeks bootcamp to learn all the web stack. N. 1 bootcamp on switchup
     diplomas:
-      d1: Full stack knowledge - rails
+      d1: HTML/CSS
+      d2: JS/JQuery
+      d3: Ruby/Ruby on Rails
+      d4: SQL/PostgreSQL
     date: Paris, 02/17 - 04/17
     url: https://www.lewagon.com
 
 - hec_lausanne:
     logo: hec-lausanne.png
     title: HEC Lausanne
-    subtitle: Best school in Switzerland
+    subtitle: Business school in Switzerland
     diplomas:
       d1: Master of Science in Corporate Finance
     date: Lausanne, 02/13 - 07/13

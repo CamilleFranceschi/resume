@@ -1,5 +1,8 @@
 // General CSS of index page
 
+.fa {
+  color: $green;
+}
 .fa:hover {
   transform: scale(1.2);
 }
@@ -76,6 +79,7 @@
 
   a {
     text-decoration: none;
+    color: $gray-dark;
   }
 
   img:hover {
