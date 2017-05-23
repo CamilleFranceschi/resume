@@ -1,13 +1,11 @@
 $(document).ready(function() {
 
   var viewportWidth = $(window).width();
-  // At the beginning
+  // At the beginning / arriving first on teh website
   if (viewportWidth < 768) {
     console.log("small screen 1");
     // Get rid of padding left due to sidebar
     $("#wrapper").removeClass("toggled");
-    // Get rid of logos for small device
-    $(".product-logo").detach();
     // Expose the navbar
     $(".navbar-resume").show();
     // Hide side bar and toggle button
@@ -33,7 +31,6 @@ $(document).ready(function() {
   // On resize
   $(window).resize(function () {
     var viewportWidth = $(window).width();
-    // var logo = $(".product-logo");
     if (viewportWidth < 768) {
       console.log("small screen 2");
       // Get rid of padding left due to sidebar
@@ -43,8 +40,6 @@ $(document).ready(function() {
       // Hide side bar and toggle button
       $("#menu-toggle").hide();
       $(".sidebar-resume").hide();
-      // Get rid of logos for small device
-      $(".product-logo").detach();
       $(".hamburger").removeClass("is-open");
       $(".hamburger").addClass("is-closed");
     } else {
@@ -54,8 +49,6 @@ $(document).ready(function() {
       // Expose side bar and toggle button
       $("#menu-toggle").show();
       $(".sidebar-resume").show();
-      // Add back the logos
-      // logo.appendTo(".product");
       // To be sure that we have hanburger by default
       $(".hamburger").removeClass("is-open");
       $(".hamburger").addClass("is-closed");

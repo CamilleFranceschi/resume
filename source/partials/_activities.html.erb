@@ -3,13 +3,13 @@
 <% data.activities.each do |exp| %>
   <% exp.each do |name, info| %>
     <div class="product card-grey product-flex">
-      <div class="product-logo">
+      <div class="product-logo hidden-xs">
         <% link_to info["url"], target: :_blank do %>
           <%= image_tag info["logo"], class: "logo-size-small" %>
         <% end %>
       </div>
 
-      <div class="product-detail padded-light-left">
+      <div class="product-detail">
         <h4><%= info["title"] %></h4>
         <p><em><%= info["subtitle"] %></em></p>
         <ul>

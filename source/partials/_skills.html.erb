@@ -7,7 +7,7 @@
   <% data.skills.each do |skill| %>
     <% count = 1 %>
     <% skill.each do |name, info| %>
-      <div class= "text-center">
+      <div class= "text-center padding-left-right" id = "chart-margin-top">
         <canvas id= "<%= name %>" height="130" width="130"></canvas>
         <% content_for(:after_js) do %>
           <script>

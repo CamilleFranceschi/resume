@@ -55,7 +55,11 @@
 // Skills section
 #skills .margined {
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
+}
+
+#chart-margin-top {
+  margin-top: 20px;
 }
 
 // Side projects section
@@ -74,14 +78,18 @@
     text-decoration: none;
   }
 
-  img {
-    margin-bottom: 20px;
-  }
-
   img:hover {
     transform: scale(1.2);
     transition: all 0.3s ease;
   }
+}
+
+#margined-stack {
+  margin-bottom: 75px;
+}
+
+#margined-screen {
+  margin-bottom: 20px;
 }
 
 .videowrapper {

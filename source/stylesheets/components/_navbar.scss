@@ -30,10 +30,13 @@ padding-right: 15px;
 
 .bars-size {
  font-size: 23px;
- z-index: 1060;
 }
 
 /* Navbar dropdown menu */
+.dropdown button {
+  border: none;
+}
+
 .dropdown {
   .fa {
     color: $gray-light;
@@ -43,7 +46,6 @@ padding-right: 15px;
   margin: 0px;
   }
 }
-
 
 .navbar-resume-dropdown-menu {
   margin-top: 10px;
@@ -61,7 +63,7 @@ padding-right: 15px;
     padding: 6px 15px;
   }
 
-  a:hover {
+  li > a:hover {
     background: rgba(26, 165, 154,0.2);
     color:black;
   }
@@ -80,11 +82,3 @@ padding-right: 15px;
   }
 }
 
-.dropdown-backdrop {
-    position: static;
-}
-
-.dropdown button {
-
-  border: none;
-}
